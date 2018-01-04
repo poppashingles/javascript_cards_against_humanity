@@ -18,5 +18,8 @@
   "homepage": "https://github.com/poppashingles/javascript_group_project#readme",
   "devDependencies": {
     "mocha": "^4.1.0"
+  },
+  "dependencies": {
+    "webpack": "^3.10.0"
   }
 }
