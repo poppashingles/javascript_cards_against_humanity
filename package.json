@@ -20,6 +20,7 @@
     "mocha": "^4.1.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "webpack": "^3.10.0"
   }
 }
