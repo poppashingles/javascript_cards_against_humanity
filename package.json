@@ -1,0 +1,22 @@
+{
+  "name": "javascript_group_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppashingles/javascript_group_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poppashingles/javascript_group_project/issues"
+  },
+  "homepage": "https://github.com/poppashingles/javascript_group_project#readme",
+  "devDependencies": {
+    "mocha": "^4.1.0"
+  }
+}
