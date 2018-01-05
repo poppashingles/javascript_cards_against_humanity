@@ -1,22 +1,13 @@
-const express = require('express')
-const parser = require('body-parser')
-const server = express()
+var express = require('express');
+var app = express();
+var bodyParser = require('body-parser');
 
-const MongoClient = require('mongodb').MongoClient
-
-server.use(parser.json())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 server.use(express.static('client/build'))
-server.use(parser.urlencoded({extended: true}))
 
+app.use(require('./controllers/index'));
 
-MongoClient.connect('mongodb://localhost:27017', function(err, client) {
-  if(err) {
-    console.log(err)
-    return
-  }
-
-
-  server.listen(3000, function(){
-    console.log("Listening on port 3000")
-  })
-})
+app.listen(3000, function() {
+  console.log('App running!');
+});
