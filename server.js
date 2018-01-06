@@ -22,6 +22,7 @@ io.on('connection', function(socket) {
       socket.nickname = data;
       nicknames.push(socket.nickname);
       io.emit('usernames', nicknames);
+      console.log(data);
     }
   });
 });
@@ -29,13 +30,14 @@ io.on('connection', function(socket) {
 io.on('connection', function(socket){
   console.log('a user connected');
   socket.on('disconnect', function(){
-    console.log('user disconnected');
+    console.log(socket.nickname + ' disconnected');
+    nicknames.splice(nicknames.indexOf(socket.nickname), 1);
   });
 });
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
+    io.emit('chat message', socket.nickname + ': ' + msg);
   });
 });
 

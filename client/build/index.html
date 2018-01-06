@@ -14,14 +14,16 @@
     /* Messages */
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body { font: 13px Helvetica, Arial; }
-    .chat-send { background: #000; padding: 3px; bottom: 0; width: 100%; }
-    .chat-send input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-    .chat-send button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+    #chat-send { background: #000; padding: 3px; bottom: 0; width: 100%; }
+    #chat-send input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+    #chat-send button { width: 30%; background: rgb(130, 224, 255); border: none; padding: 10px; }
     #messages { list-style-type: none; margin: 0; padding: 0; }
     #messages li { padding: 5px 10px; }
     #messages li:nth-child(odd) { background: #eee; }
 
     #chat-hide { display: none; }
+
+    #nickname { height: 30px; margin-bottom: 10px; }
 
     .row.content {height: 450px}
     .sidenav {
@@ -54,28 +56,27 @@
       <div class="col-sm-2 sidenav">
         <div id="chat-hide">
           <ul id="messages"></ul>
-          <form action="" class="chat-send">
+          <form action="" id="chat-send">
             <input id="m" autocomplete="off" /><button>Send</button>
           </form>
         </div>
       </div>
       <div class="col-sm-8 text-left">
-        <h1>Welcome</h1>
 
         <div id="nickname-div">
           <p>Enter a username</p>
           <p id="nick-error"></p>
           <form id="set-nickname">
-            <input size="35" id="nickname"></input>
-            <input type="submit"></input>
+            <input size="50" id="nickname"></input><br/>
+            <input type="submit" class="btn btn-success"></input>
           </form>
         </div>
 
-        <button id="button" class="btn btn-success">Show cards</button>
+        <!-- <button id="button" class="btn btn-success">Show cards</button> -->
         <ul id="card-list"></ul>
       </div>
       <div class="col-sm-2 sidenav">
-        <div class="well">
+        <div id="users">
           <p>Signed in users</p>
         </div>
       </div>
@@ -91,6 +92,7 @@
       var $nickForm = $('#set-nickname');
       var $nickError = $('#nick-error');
       var $nickBox = $('#nickname');
+      var $users = $('#users');
 
       $nickForm.submit(function(e) {
         e.preventDefault();
@@ -105,7 +107,15 @@
         $nickBox.val('');
       });
 
-      $('form').submit(function(){
+      socket.on('usernames', function(data) {
+        var html = '<h3>Signed in users</h3><br/>';
+        for(i=0 ; i<data.length ; i++) {
+          html += data[i] + '<br/>'
+        }
+        $users.html(html)
+      });
+
+      $('#chat-send').submit(function(){
         socket.emit('chat message', $('#m').val());
         $('#m').val('');
         return false;
