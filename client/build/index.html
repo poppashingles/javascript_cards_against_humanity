@@ -84,10 +84,27 @@
 
   <script src="/socket.io/socket.io.js"></script>
   <!-- <script src="https://code.jquery.com/jquery-1.11.1.js"></script> -->
-  <script src="../app.js"></script>
+  <!-- <script src="../app.js"></script> -->
   <script>
     $(function () {
       var socket = io();
+      var $nickForm = $('#set-nickname');
+      var $nickError = $('#nick-error');
+      var $nickBox = $('#nickname');
+
+      $nickForm.submit(function(e) {
+        e.preventDefault();
+        socket.emit('new user', $nickBox.val(), function(data) {
+          if(data) {
+            $('#nickname-div').hide();
+            $('#chat-hide').show();
+          } else {
+            $nickError.html('That username is already taken, try again');
+          }
+        });
+        $nickBox.val('');
+      });
+
       $('form').submit(function(){
         socket.emit('chat message', $('#m').val());
         $('#m').val('');
