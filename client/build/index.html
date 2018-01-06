@@ -21,7 +21,9 @@
     #messages li { padding: 5px 10px; }
     #messages li:nth-child(odd) { background: #eee; }
 
-    #chat-hide { display: none; }
+    #chat, #new-game-button { display: none; }
+
+    #new-game-button { margin-bottom: 20px; }
 
     #nickname { height: 30px; margin-bottom: 10px; }
 
@@ -54,7 +56,7 @@
   <div class="container-fluid text-center">
     <div class="row content">
       <div class="col-sm-2 sidenav">
-        <div id="chat-hide">
+        <div id="chat">
           <ul id="messages"></ul>
           <form action="" id="chat-send">
             <input id="m" autocomplete="off" /><button>Send</button>
@@ -73,12 +75,11 @@
         </div>
 
         <!-- <button id="button" class="btn btn-success">Show cards</button> -->
-        <ul id="card-list"></ul>
+        <!-- <ul id="card-list"></ul> -->
       </div>
       <div class="col-sm-2 sidenav">
-        <div id="users">
-
-        </div>
+        <button id="new-game-button" class="btn btn-success">Start a new game</button>
+        <div id="users"></div>
       </div>
     </div>
   </div>
@@ -99,7 +100,7 @@
         socket.emit('new user', $nickBox.val(), function(data) {
           if(data) {
             $('#nickname-div').hide();
-            $('#chat-hide').show();
+            $('#chat').show();
           } else {
             $nickError.html('That username is already taken, try again');
           }
@@ -115,11 +116,21 @@
         $users.html(html)
       });
 
+      socket.on('show button', function(data) {
+        $('#new-game-button').show();
+      })
+
+      $('#new-game-button').click(function() {
+        // Reference the method to start a new game here
+        $('#new-game-button').hide();
+      })
+
       $('#chat-send').submit(function(){
         socket.emit('chat message', $('#m').val());
         $('#m').val('');
         return false;
       });
+
       socket.on('chat message', function(msg){
         $('#messages').append($('<li>').text(msg));
       });
