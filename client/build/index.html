@@ -14,7 +14,7 @@
     /* Messages */
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body { font: 13px Helvetica, Arial; }
-    #chat-send { background: #000; padding: 3px; bottom: 0; width: 100%; }
+    #chat-send { background: #000; padding: 3px; bottom: 0; width: 100%; border-radius: 5px; }
     #chat-send input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
     #chat-send button { width: 30%; background: rgb(130, 224, 255); border: none; padding: 10px; }
     #messages { list-style-type: none; margin: 0; padding: 0; }
@@ -23,9 +23,15 @@
 
     #chat, #new-game-button { display: none; }
 
-    #new-game-button { margin-bottom: 20px; }
+    #chat { position: absolute; bottom: 0; width:85%; height: 100%; }
+
+    #new-game-button { margin-top: 8px; margin-left: 30px; }
 
     #nickname { height: 30px; margin-bottom: 10px; }
+
+    #chat-button { margin-top: 5px; }
+
+    #white-cards img { width: 9.745%; }
 
     .row.content {height: 450px}
     .sidenav {
@@ -37,7 +43,7 @@
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
-        padding: 15px;
+        padding: 0px;
       }
       .row.content {height:auto;}
     }
@@ -49,6 +55,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">Cards Against Javascript</a>
+        <button id="new-game-button" class="btn btn-success">Start a new game</button>
       </div>
     </div>
   </nav>
@@ -59,7 +66,7 @@
         <div id="chat">
           <ul id="messages"></ul>
           <form action="" id="chat-send">
-            <input id="m" autocomplete="off" /><button>Send</button>
+            <input id="m" autocomplete="off" /><button id="chat-button">Send</button>
           </form>
         </div>
       </div>
@@ -78,11 +85,25 @@
         <!-- <ul id="card-list"></ul> -->
       </div>
       <div class="col-sm-2 sidenav">
-        <button id="new-game-button" class="btn btn-success">Start a new game</button>
         <div id="users"></div>
       </div>
     </div>
   </div>
+
+  <footer>
+    <div id="white-cards">    
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+      <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
+    </div>
+  </footer>
 
   <script src="/socket.io/socket.io.js"></script>
   <!-- <script src="https://code.jquery.com/jquery-1.11.1.js"></script> -->
