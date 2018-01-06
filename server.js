@@ -22,7 +22,7 @@ io.on('connection', function(socket) {
       socket.nickname = data;
       nicknames.push(socket.nickname);
       io.emit('usernames', nicknames);
-      console.log(data);
+      io.emit('chat message', socket.nickname + ' has joined the room');
     }
   });
 });
@@ -31,7 +31,9 @@ io.on('connection', function(socket){
   console.log('a user connected');
   socket.on('disconnect', function(){
     console.log(socket.nickname + ' disconnected');
+    io.emit('chat message', socket.nickname + ' has left the room');
     nicknames.splice(nicknames.indexOf(socket.nickname), 1);
+    io.emit('usernames', nicknames);
   });
 });
 
