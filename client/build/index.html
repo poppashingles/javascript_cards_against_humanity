@@ -64,7 +64,7 @@
       <div class="col-sm-8 text-left">
 
         <div id="nickname-div">
-          <p>Enter a username</p>
+          <p>Enter a username to get started</p>
           <p id="nick-error"></p>
           <form id="set-nickname">
             <input size="50" id="nickname" required="required"></input><br/>
@@ -77,7 +77,7 @@
       </div>
       <div class="col-sm-2 sidenav">
         <div id="users">
-          <p>Signed in users</p>
+
         </div>
       </div>
     </div>
@@ -108,7 +108,7 @@
       });
 
       socket.on('usernames', function(data) {
-        var html = '<h3>Signed in users</h3><br/>';
+        var html = '<p>Signed in users</p><br/>';
         for(i=0 ; i<data.length ; i++) {
           html += data[i] + '<br/>'
         }
