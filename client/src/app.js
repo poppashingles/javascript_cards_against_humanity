@@ -27,8 +27,6 @@ const requestComplete = function() {
 const populateList = function(cards) {
   const ul = document.querySelector('#card-list')
 
-  console.log(cards);
-
   cards.blackCards.forEach(function(card) {
     const li = document.createElement('li')
     li.innerText = card.text
