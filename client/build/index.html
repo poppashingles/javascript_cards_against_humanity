@@ -13,7 +13,7 @@
   <style>
     /* Messages */
     * {margin: 0; padding: 0; box-sizing: border-box;}
-    body { font: 13px Helvetica, Arial; }
+    body { font: 13px Helvetica, Arial; background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7) ), url("http://sm.ign.com/ign_in/news/c/cards-agai/cards-against-humanity-available-as-free-web-app_26qe.png"); }
     #chat-send { background: #000; padding: 3px; bottom: 0; width: 100%; border-radius: 5px; }
     #chat-send input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
     #chat-send button { width: 30%; background: rgb(130, 224, 255); border: none; padding: 10px; }
@@ -31,7 +31,9 @@
 
     #chat-button { margin-top: 5px; }
 
-    #white-cards img { width: 9.745%; }
+    #white-cards img { width: 9.745%; border: white 1px solid; border-radius: 10px; }
+
+    #nickname-div { color: grey; }
 
     .row.content {height: 450px}
     .sidenav {
@@ -70,7 +72,7 @@
           </form>
         </div>
       </div>
-      <div class="col-sm-8 text-left">
+      <div class="col-sm-8 text-center">
 
         <div id="nickname-div">
           <p>Enter a username to get started</p>
@@ -91,7 +93,7 @@
   </div>
 
   <footer>
-    <div id="white-cards">    
+    <div id="white-cards">
       <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
       <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
       <a href="#"><img src="http://www.infovia.net/cdn/6/2011/821/blank-playing-card-template_64268.png"></a>
