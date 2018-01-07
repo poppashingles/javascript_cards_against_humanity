@@ -84,10 +84,8 @@
             <input type="submit" class="btn btn-success"></input>
           </form>
         </div>
-
-        <!-- <button id="button" class="btn btn-success">Show cards</button> -->
-        <!-- <ul id="card-list"></ul> -->
       </div>
+
       <div class="col-sm-2 sidenav" id="side-nav-r">
         <div id="users"></div>
       </div>
@@ -128,6 +126,7 @@
             $('#chat').toggle();
             $('#side-nav-l').toggle();
             $('#side-nav-r').toggle();
+            // Add user's nickname to list of nicknames
           } else {
             $nickError.html('That username is already taken, try again');
           }
@@ -157,6 +156,10 @@
         $('#m').val('');
         return false;
       });
+
+      socket.on('submit nickname', function(data) {
+        $('#nickname')
+      })
 
       socket.on('chat message', function(msg){
         $('#messages').append($('<li>').text(msg));
