@@ -14,14 +14,14 @@
     /* Messages */
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body { font: 13px Helvetica, Arial; background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7) ), url("http://sm.ign.com/ign_in/news/c/cards-agai/cards-against-humanity-available-as-free-web-app_26qe.png"); }
-    #chat-send { background: #000; padding: 3px; bottom: 0; width: 100%; border-radius: 5px; }
+    #chat-send { background: #000; padding: 3px; bottom: 5px; width: 100%; border-radius: 5px; position: absolute; }
     #chat-send input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-    #chat-send button { width: 30%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+    #chat-send button { width: 30%; background: #5cb85c; border: none; padding: 10px; color: white; }
     #messages { list-style-type: none; margin: 0; padding: 0; }
     #messages li { padding: 5px 10px; }
     #messages li:nth-child(odd) { background: #eee; }
 
-    #chat, #new-game-button { display: none; }
+    #chat, #new-game-button, #side-nav-l, #side-nav-r { display: none; }
 
     #chat { position: absolute; bottom: 0; width:85%; height: 100%; }
 
@@ -33,11 +33,13 @@
 
     #white-cards img { width: 9.745%; border: white 1px solid; border-radius: 10px; }
 
-    #nickname-div { color: grey; }
+    #nickname-div { color: grey; margin-left: 410px; margin-top: 40px; }
+
+    .navbar { margin-bottom: 0; }
 
     .row.content {height: 450px}
     .sidenav {
-      padding-top: 20px;
+      padding-top: 0px;
       background-color: #f1f1f1;
       height: 100%;
     }
@@ -64,7 +66,7 @@
 
   <div class="container-fluid text-center">
     <div class="row content">
-      <div class="col-sm-2 sidenav">
+      <div class="col-sm-2 sidenav" id="side-nav-l">
         <div id="chat">
           <ul id="messages"></ul>
           <form action="" id="chat-send">
@@ -86,7 +88,7 @@
         <!-- <button id="button" class="btn btn-success">Show cards</button> -->
         <!-- <ul id="card-list"></ul> -->
       </div>
-      <div class="col-sm-2 sidenav">
+      <div class="col-sm-2 sidenav" id="side-nav-r">
         <div id="users"></div>
       </div>
     </div>
@@ -122,8 +124,10 @@
         e.preventDefault();
         socket.emit('new user', $nickBox.val(), function(data) {
           if(data) {
-            $('#nickname-div').hide();
-            $('#chat').show();
+            $('#nickname-div').toggle();
+            $('#chat').toggle();
+            $('#side-nav-l').toggle();
+            $('#side-nav-r').toggle();
           } else {
             $nickError.html('That username is already taken, try again');
           }
@@ -132,7 +136,7 @@
       });
 
       socket.on('usernames', function(data) {
-        var html = '<p>Signed in users</p><br/>';
+        var html = '<br/><p>Users currently signed in</p><br/>';
         for(i=0 ; i<data.length ; i++) {
           html += data[i] + '<br/>'
         }
