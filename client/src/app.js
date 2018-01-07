@@ -1,5 +1,5 @@
 //TODO: replace the rawdata with api calls??? Decision needs to be made - "https://api.myjson.com/bins/qhj4z"
-const rawdata = require('./rawdata');
+const rawdata = require('./services/rawdata');
 
 const blackCards = rawdata.data.blackCards
 const whiteCards = rawdata.data.whiteCards
