@@ -73,6 +73,22 @@ describe('Game', function () {
     game.setCardCzar();
     let nonCzarPlayers = game.getNonCardCzarPlayers();
     assert.strictEqual(nonCzarPlayers.length, 1);
-  })
+  });
+
+	it('should know when game is over', function(){
+		game.addPlayer(player1);
+    game.addPlayer(player2);
+		assert.strictEqual(game.isGameOver(), false);
+		player1.addPoint();
+		assert.strictEqual(game.isGameOver(), false);
+		player1.addPoint();
+		assert.strictEqual(game.isGameOver(), false);
+		player1.addPoint();
+		assert.strictEqual(game.isGameOver(), false);
+		player1.addPoint();
+		assert.strictEqual(game.isGameOver(), false);
+		player1.addPoint();
+		assert.strictEqual(game.isGameOver(), true);
+	});
 
   });

@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha specs",
+    "test": "mocha -- src/models/specs/*.js",
     "start": "nodemon server.js",
     "build": "cd client && webpack -w"
   },
@@ -27,6 +27,7 @@
     "mongodb": "^3.0.1",
     "nodemon": "^1.14.7",
     "socket.io": "^2.0.4",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "mocha": "^4.1.0"
   }
 }
