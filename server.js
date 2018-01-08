@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const nicknames = [];
-
+const playerHand = [[10, 2]];
 app.use(bodyParser.json());
 app.use(express.static('client/build'));
 app.use(bodyParser.urlencoded({extended: true}));
