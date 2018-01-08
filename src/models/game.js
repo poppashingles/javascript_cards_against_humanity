@@ -26,7 +26,7 @@ Game.prototype.addPlayer = function(player){
 Game.prototype.fillPlayerHands = function(){
   //player variable name is taken so used person as alternative naming
   for (person of this.players){
-      for(let i = 0; i < 10; i++) {
+      while(person.cards.length < 10) {
           person.addCard(this.whiteCards[0]);
           this.whiteCards.shift();
       }
@@ -82,25 +82,26 @@ Game.prototype.startGame = function(){
   this.shuffleCards(this.blackCards);
   this.shuffleCards(this.whiteCards);
   this.fillPlayerHands();
-  this.setCardCzar();
-  this.isGameOver();
+  
+  // this.setCardCzar();
+  // this.isGameOver();
+  //
+  //   while (!isGameOver()){
+  //     setCardCzar();
+  //     let nonCzarPlayers = getNonCardCzarPlayers();
+  //     // 8888: render black card to card czar view
+  //     this.getBlackCard();
+  //     //8888: logic for allowing players to select white card to play?
+  //     //8888: logic for allowing czar to pick winner.
+  //     //8888: winning player needs have addPoint function ran on them.
+  //         this.fillPlayerHands();
+  //
+  //     }if (this.isGameOver()){
 
-    while (!isGameOver()){
-      setCardCzar();
-      let nonCzarPlayers = getNonCardCzarPlayers();
-      // TODO: render black card to card czar view
-      this.getBlackCard();
-      //TODO: logic for allowing players to select white card to play?
-      //TODO: logic for allowing czar to pick winner.
-      //TODO: winning player needs have addPoint function ran on them.
-          this.fillPlayerHands();
-
-      }if (this.isGameOver()){
-        
       }
 
 
 
-};
+// };
 
 module.exports = Game;
