@@ -1,128 +1,68 @@
-//TODO: replace the rawdata with api calls??? Decision needs to be made - "https://api.myjson.com/bins/qhj4z"
-const rawdata = require('./services/rawdata');
+const io = require("socket.io-client")
 
-const blackCards = rawdata.data.blackCards
-const whiteCards = rawdata.data.whiteCards
+const app = function() {
+  const socket = io();
 
-// Create local 'floor' and 'random' functions that mirror Math.floor(), Math.random()
-const { floor: floor, random: random } = Math;
-// Get counts for questions and answers
-const numOfBlackCards = blackCards.length, numOfWhiteCards = whiteCards.length;
-// Keep a constant maxScore
-const maxScore = 2;
+  socket.on('connect', function() {
+    console.log('connected');
 
-const getRandomBlackCard = () => { return blackCards[floor(random()*numOfBlackCards)] };
-const getRandomWhiteCard = () => { return whiteCards[floor(random()*numOfWhiteCards)] };
+    const buttonForm = document.querySelector('#click-form');
 
-// Register players
-let players = [];
+    buttonForm.addEventListener('click', function(evt) {
+      evt.preventDefault();
 
-// TODO: how to new up new players from player class
-// TODO: add Game object, addPlayer will be a function on that Prototype ie...
-  // Game.prototype.addPlayer = function(player){
-  //   this.players.push(player);
-  // }
-players.push({name: "Player1", score: 0, cards: [], isAsker: false});
-players.push({name: "Player2", score: 0, cards: [], isAsker: false});
-players.push({name: "Player3", score: 0, cards: [], isAsker: false});
+      const nickBox = document.querySelector('#nickname');
+      socket.emit('new user', nickBox.value, function(data) {
+        if(data) {
 
-const getActivePlayers = () => {
-    let activePlayers = []
-    for (player of players) {
-        if (!player.isCardCzar)
-        {
-            activePlayers.push(player);
+          document.querySelector('#nickname-div').style.display='none';
+          document.querySelector('#chat').style.display='block';
+          document.querySelector('#side-nav-l').style.display='block';
+          document.querySelector('#side-nav-r').style.display='block';
+
+
+        } else {
+          document.querySelector('#nick-error').innerHTML = "That username is already taken, try again";
         }
-    }
-    return activePlayers
-}
+      });
+      nickBox.value = '';
+    });
+  });
 
-const isGameOver = () => {
-    for (player of players) {
-        if (player.score === maxScore)
-        {
-            return true;
-        }
+  socket.on('usernames', function(data) {
+    var html = '<br/><p>Users currently signed in</p><br/>';
+    for(i=0 ; i<data.length ; i++) {
+      html += data[i] + '<br/>'
     }
+    document.querySelector('#users').innerHTML = html;
+  });
+
+
+  const chatButton = document.querySelector('#chat-button')
+  chatButton.addEventListener('click', function(evt){
+    evt.preventDefault();
+    let message = document.querySelector('#m');
+    socket.emit('chat message', message.value);
+    message.value = '';
     return false;
-};
+  });
 
-const getWinner = () => {
-    for (player of players) {
-        if (player.score === maxScore)
-        {
-            return player;
-        }
-    }
-};
+  socket.on('chat message', function(msg){
+    const li = document.createElement('li');
+    li.innerText = msg;
+    document.querySelector('#messages').appendChild(li)
+  });
 
-const setNewCardCzar = () => {
-    // For each player in players
-    for (let i = 0; i<players.length;i++) {
-        // If this player is the Card Czar
-        if (players[i].isCardCzar) {
-            // Remove the czar flag, as we want to choose a new one
-            players[i].isCardCzar = false;
-            // If this player is the last in the array
-            if (i === players.length-1)
-            {
-                // Set the first person in the array as Asker
-                players[0].isCardCzar = true;
-            }else{
-                // Set the next person in the array as Asker
-                players[i+1].isCardCzar = true;
-            }
-            return;
-        }
-    }
-    // If we havent set an asker yet, set the first player as asker
-    players[0].isCardCzar = true;
+  const startButton = document.querySelector('#new-game-button')
+  socket.on('show button', function(data) {
+    startButton.style.display = "block";
+  })
+
+  startButton.addEventListener('click', function(evt) {
+    //   // Reference the method to start a new game here
+    startButton.style.display = 'none';
+  });
+  
 }
 
-
-// Deal white cards to players
-for (player of players){
-    for(let i = 0; i < 10; i++) {
-        player.cards.push(getRandomWhiteCard())
-    }
-}
-
-// While no player has maxpoints
-while (!isGameOver()){
-    // Choose Czar
-    setNewCardCzar();
-    // Get active players
-    let activePlayers = getActivePlayers();
-    // Show black card
-    q = getRandomBlackCard()
-    console.log(`QUESTION: ${q.text}`)
-
-    // For each player who is not Czar
-    for (player of activePlayers){
-        //   Play a white card(s), remove cards from hand
-        for(let i = 0; i < q.pick; i++) {
-            // Pick a random answer from our hand (for testing purposes)
-            let answer = player.cards[floor(random()*player.cards.length)];
-            // Remove the chosen answer from our hand
-            player.cards = player.cards.filter(card => card !== answer);
-            // Write answer/s to console
-            console.log(`  ${player.name}: ${answer}`);
-        }
-        // Get new white cards to replace those used
-        for(let i = 0; i < q.pick; i++){
-            player.cards.push(getRandomWhiteCard());
-        }
-    }
-
-    // Choose (random) round winner for testing purposes
-    var winningPlayer = activePlayers[floor(random()*activePlayers.length)];
-    console.log(`Winner: ${winningPlayer.name}`);
-
-    // Increment winner players points
-    winningPlayer.score += 1;
-
-    console.log();
-}
-
-// Announce winner
-console.log(`And the player with the most awesome points is: ${getWinner().name}!!!`);
+document.addEventListener("DOMContentLoaded", app)
