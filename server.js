@@ -25,7 +25,6 @@ io.on('connection', function(socket) {
       io.emit('chat message', socket.nickname + ' has joined the room');
     }
     if (nicknames.length === 1) {
-      // io.emit('show button', data);
       io.to(socket.id).emit('show button', data);
     }
   });
