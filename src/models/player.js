@@ -1,8 +1,9 @@
-const Player = function(username, score, cards, isCardCzar) {
+const Player = function(username) {
   this.username = username;
   this.score = 0;
   this.cards = [];
   this.isCardCzar = false;
+  this.canStartGame = false;
 }
 
 Player.prototype.addCard = function(card){

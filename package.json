@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha -- src/models/specs/*.js",
     "start": "nodemon server.js",
-    "build": "cd client && webpack -w"
+    "build": "cd src && webpack -w"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,10 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "mocha": "^4.1.0",
     "mongodb": "^3.0.1",
     "nodemon": "^1.14.7",
     "socket.io": "^2.0.4",
-    "webpack": "^3.10.0",
-    "mocha": "^4.1.0"
+    "webpack": "^3.10.0"
   }
 }

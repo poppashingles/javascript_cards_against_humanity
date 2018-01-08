@@ -75,6 +75,13 @@ describe('Game', function () {
     assert.strictEqual(nonCzarPlayers.length, 1);
   });
 
+	it('should be able to play a black question card', function(){
+		assert.strictEqual(game.blackCards.length, 414);
+		game.getBlackCard();
+		assert.strictEqual(game.blackCards.length, 413);
+
+	});
+
 	it('should know when game is over', function(){
 		game.addPlayer(player1);
     game.addPlayer(player2);
