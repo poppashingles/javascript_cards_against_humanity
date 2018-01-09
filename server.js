@@ -53,9 +53,7 @@ io.on('connection', function(socket){
     io.emit('chat message', socket.nickname + ': ' + msg);
   });
 
-  socket.on('white card', function(card){
-    io.emit('selected white card', card);
-  })
+
   socket.on('new game', function(msg){
     players.forEach(function(player){
       const newPlayer = new Player(player.name, player.id)
@@ -66,11 +64,13 @@ io.on('connection', function(socket){
       io.to(player.id).emit('cards given', player.cards)
       if (player.isCardCzar){
         io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
-      }else{
-        io.to(player.id).emit('czar confirm', `${player.username}, select a card to play`);
+
       };
     });
-    io.emit('black card', newGame.getBlackCard());
+
+    io.emit('black card', newGame.getBlackCard())
+
+
 
 
 
