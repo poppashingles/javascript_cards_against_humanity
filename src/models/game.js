@@ -66,41 +66,51 @@ Game.prototype.getBlackCard = function(){
   return cardToDelete.text
 }
 
+Game.prototype.newRound = function(){
+  if(isGameOver()){
+    this.declareWinner();
+  }else{
+    this.fillPlayerHands();
+    this.setCardCzar();
+    this.getBlackCard();
+  }
+}
+
 Game.prototype.isGameOver = function(){
     for (person of this.players) {
         if (person.score === maxPoints)
         {
-            return true;
+            return true
         }
     }
     return false;
 };
+
+Game.prototype.declareWinner = function(){
+  for (person of this.players){
+    if (person.score === maxPoints)
+    {
+      return `${person.username}, congratulations, you are the winner!`
+    }
+  }
+}
+
 
 
 Game.prototype.startGame = function(){
   // this.addPlayer() TODO: need to get usernames from clientside, convert to Player objects and add to Game.
   this.shuffleCards(this.blackCards);
   this.shuffleCards(this.whiteCards);
-  this.fillPlayerHands();
-  this.setCardCzar();
-  // this.isGameOver();
-  //
-  //   while (!isGameOver()){
-  //     setCardCzar();
-  //     let nonCzarPlayers = getNonCardCzarPlayers();
-  //     // 8888: render black card to card czar view
-  //     this.getBlackCard();
+  this.newRound()
+
+
   //     //8888: logic for allowing players to select white card to play?
   //     //8888: logic for allowing czar to pick winner.
   //     //8888: winning player needs have addPoint function ran on them.
-  //         this.fillPlayerHands();
-  //
-  //     }if (this.isGameOver()){
-
-      }
+  }
 
 
 
-// };
+
 
 module.exports = Game;

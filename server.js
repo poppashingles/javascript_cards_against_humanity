@@ -62,9 +62,8 @@ io.on('connection', function(socket){
     newGame.players.forEach(function(player) {
       io.to(player.id).emit('cards given', player.cards)
       if (player.isCardCzar){
-        io.to(player.id).emit('czar confirm', message);
-      }
-
+        io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
+      };
 
     });
   });

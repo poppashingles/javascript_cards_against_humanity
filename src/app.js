@@ -73,6 +73,11 @@ const app = function() {
       ul.appendChild(li)
     });
   })
+
+  socket.on('czar confirm', function(message){
+    const playerStatus = document.querySelector("#player-status")
+    playerStatus.innerText = message;
+  })
 }
 
 document.addEventListener("DOMContentLoaded", app)
