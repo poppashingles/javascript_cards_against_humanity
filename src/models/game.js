@@ -67,7 +67,7 @@ Game.prototype.getBlackCard = function(){
 }
 
 Game.prototype.newRound = function(){
-  if(isGameOver()){
+  if(this.isGameOver()){
     this.declareWinner();
   }else{
     this.fillPlayerHands();

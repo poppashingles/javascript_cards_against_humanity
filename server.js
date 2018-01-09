@@ -42,6 +42,7 @@ io.on('connection', function(socket){
     if(socket.nickname) {
       io.emit('chat message', socket.nickname + ' has left the room');
       nicknames.splice(nicknames.indexOf(socket.nickname), 1);
+      players.splice(players.indexOf(socket.nickname), 1);
       io.emit('usernames', nicknames);
     }
   });
@@ -63,10 +64,19 @@ io.on('connection', function(socket){
       io.to(player.id).emit('cards given', player.cards)
       if (player.isCardCzar){
         io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
-      };
 
+      };
     });
+
+    io.emit('black card', newGame.getBlackCard())
+
+
+
+
+
   });
+
+
 
 
 });

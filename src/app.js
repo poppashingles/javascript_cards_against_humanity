@@ -21,6 +21,7 @@ const app = function() {
           document.querySelector('#side-nav-r').style.display='block';
 
 
+
         } else {
           document.querySelector('#nick-error').innerHTML = "That username is already taken, try again";
         }
@@ -54,6 +55,7 @@ const app = function() {
   });
 
   const startButton = document.querySelector('#new-game-button')
+  const blackCard = document.querySelector('#black-card')
   socket.on('show button', function(data) {
     startButton.style.display = "block";
   })
@@ -61,23 +63,45 @@ const app = function() {
   startButton.addEventListener('click', function(evt) {
     socket.emit('new game');
     startButton.style.display = 'none';
+    blackCard.style.display = 'block';
     console.log('start button clicked');
 
   });
+
   socket.on('cards given', function(cards) {
-    console.log(cards);
-      cards.forEach(function(card) {
-      const ul = document.querySelector('#cardlist')
+    const white_Cards = document.querySelector('#white-cards')
+    cards.forEach(function(card) {
       const li = document.createElement('li')
-      li.innerText = card;
-      ul.appendChild(li)
-    });
+      const anchor = document.createElement('a')
+      anchor.innerText = card
+      anchor.style.visibility = 'visible';
+      li.appendChild(anchor)
+      white_Cards.appendChild(li)
+
+    })
+
   })
 
   socket.on('czar confirm', function(message){
     const playerStatus = document.querySelector("#player-status")
     playerStatus.innerText = message;
   })
+
+  socket.on('black card', function(blackCard) {
+    const ul = document.querySelector('#black-card')
+    ul.style.visibility = 'visible';
+    ul.innerHTML = ''
+
+    const li = document.createElement('li')
+    const anchor = document.createElement('a')
+    anchor.innerText = ''
+    anchor.style.visibility = 'visible';
+    anchor.innerText = blackCard
+    li.appendChild(anchor)
+    ul.appendChild(li)
+  })
+
+
 }
 
 document.addEventListener("DOMContentLoaded", app)

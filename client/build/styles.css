@@ -11,13 +11,46 @@ body { font: 13px Helvetica, Arial; background: linear-gradient( rgba(0, 0, 0, 0
 
 #chat { position: absolute; bottom: 0; width:85%; height: 100%; }
 
+#messages li {
+  text-align: left;
+}
+
 #new-game-button { margin-top: 8px; margin-left: 30px; }
 
 #nickname { height: 30px; margin-bottom: 10px; }
 
 #chat-button { margin-top: 5px; }
 
-#white-cards img { width: 9.745%; border: white 1px solid; border-radius: 10px; }
+
+
+#white-cards li, #black-card {
+
+text-align: center;
+vertical-align: middle;
+margin: 12px;
+width: 164px;
+height: 230px;
+border: white 1px solid;
+border-radius: 10px;
+display: inline-block;
+background-color: white;
+background-repeat: no-repeat;
+}
+#white-cards li a, #black-card {
+  padding: 4px;
+  color: black;
+  font-size: 15px;
+  font-family: 'helvetica neue';
+  margin-top: 100px;
+  display: block;
+  width: 164px;
+  height: 230px;
+  visibility: hidden;
+}
+#white-cards li a:hover {
+  /*background-color: red;*/
+  cursor: pointer;
+}
 
 #nickname-div { color: grey; margin-left: 410px; margin-top: 40px; }
 
