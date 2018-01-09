@@ -59,10 +59,20 @@ const app = function() {
   })
 
   startButton.addEventListener('click', function(evt) {
-    //   // Reference the method to start a new game here
+    socket.emit('new game');
     startButton.style.display = 'none';
+    console.log('start button clicked');
+
   });
-  
+  socket.on('cards given', function(cards) {
+    console.log(cards);
+      cards.forEach(function(card) {
+      const ul = document.querySelector('#cardlist')
+      const li = document.createElement('li')
+      li.innerText = card;
+      ul.appendChild(li)
+    });
+  })
 }
 
 document.addEventListener("DOMContentLoaded", app)
