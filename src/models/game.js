@@ -82,8 +82,7 @@ Game.prototype.startGame = function(){
   this.shuffleCards(this.blackCards);
   this.shuffleCards(this.whiteCards);
   this.fillPlayerHands();
-  
-  // this.setCardCzar();
+  this.setCardCzar();
   // this.isGameOver();
   //
   //   while (!isGameOver()){
