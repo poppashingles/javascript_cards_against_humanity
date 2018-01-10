@@ -63,6 +63,8 @@ background-repeat: no-repeat;
 
 #nickname-div { color: grey; margin-left: 410px; margin-top: 40px; }
 
+#player-status { width: 800px; margin-left: 250px; color: white; margin-top: 10px; }
+
 .navbar { margin-bottom: 0; }
 
 .row.content {height: 450px}
