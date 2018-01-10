@@ -4,6 +4,7 @@ const app = function() {
   const socket = io();
 
   socket.on('connect', function() {
+    console.log('connected');
 
     const buttonForm = document.querySelector('#click-form');
 
@@ -63,6 +64,7 @@ const app = function() {
     socket.emit('new game');
     startButton.style.display = 'none';
     blackCard.style.display = 'block';
+    console.log('start button clicked');
 
   });
 
@@ -78,6 +80,8 @@ const app = function() {
       li.addEventListener('click', function(evt){
         evt.preventDefault();
         socket.emit('white card', card)
+        console.log("card clicked");
+        console.log(card);
       })
 
     })
@@ -101,32 +105,22 @@ const app = function() {
     anchor.innerText = blackCard
     li.appendChild(anchor)
     ul.appendChild(li)
+    console.log(blackCard);
   });
 
 
 
-  socket.on('selected white cards', function(selectedCards){
-    const ul = document.querySelector('#selected-white-cards');
+  socket.on('selected white card', function(selectedWhiteCard){
+    const ul = document.querySelector('#black-card');
     ul.style.visibility = 'visible';
-
-    selectedCards.forEach(function(card) {
-      const li = document.createElement('li');
-      const anchor = document.createElement('a');
-      anchor.style.visibility = 'visible';
-      anchor.innerText = card;
-      li.appendChild(anchor);
-      ul.appendChild(li)
-    })
-
-    // li.addEventListener('click', function(evt) {
-    //   evt.preventDefault()
-    //   socket.emit('declare winner', selectedWhiteCard)
-    // })
-
-
+    const li = document.createElement('li');
+    const anchor = document.createElement('a');
+    anchor.style.visibility = 'visible';
+    anchor.innerText = selectedWhiteCard;
+    li.appendChild(anchor);
+    ul.appendChild(li)
+    console.log(selectedWhiteCard);
   });
-
-
 
 
 }
