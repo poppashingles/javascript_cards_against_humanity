@@ -10,6 +10,7 @@ app.use(express.static('client/build'));
 app.use(bodyParser.urlencoded({extended: true}));
 const Game = require('./src/models/game.js');
 const Player = require('./src/models/player.js');
+let selectedCards = [];
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -54,9 +55,15 @@ io.on('connection', function(socket){
   });
 
   socket.on('white card', function(card){
-    io.emit('selected white card', card);
+    // player.cards.removeEventListener('click')
+    selectedCards.push(card);
+    console.log(selectedCards);
+    if(selectedCards.length === players.length - 1) {
+      io.emit('selected white cards', selectedCards);
+    }
   })
   socket.on('new game', function(msg){
+    selectedCards = [];
     players.forEach(function(player){
       const newPlayer = new Player(player.name, player.id)
       newGame.addPlayer(newPlayer);
@@ -71,6 +78,10 @@ io.on('connection', function(socket){
       };
     });
     io.emit('black card', newGame.getBlackCard());
+
+    socket.on('declare winner', function(selectedWhiteCard) {
+      console.log(selectedWhiteCard)
+    })
 
 
 
