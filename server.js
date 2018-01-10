@@ -10,7 +10,7 @@ app.use(express.static('client/build'));
 app.use(bodyParser.urlencoded({extended: true}));
 const Game = require('./src/models/game.js');
 const Player = require('./src/models/player.js');
-const selectedCards = [];
+let selectedCards = [];
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -63,6 +63,7 @@ io.on('connection', function(socket){
     }
   })
   socket.on('new game', function(msg){
+    selectedCards = [];
     players.forEach(function(player){
       const newPlayer = new Player(player.name, player.id)
       newGame.addPlayer(newPlayer);

@@ -36,6 +36,7 @@ display: inline-block;
 background-color: white;
 background-repeat: no-repeat;
 }
+
 #white-cards li a, #black-card li a, #selected-white-cards li a {
   padding: 4px;
   color: black;
@@ -50,6 +51,14 @@ background-repeat: no-repeat;
 #white-cards li a:hover, #selected-white-cards li a:hover, #black-card li a:hover  {
   /*background-color: red;*/
   cursor: pointer;
+}
+
+#black-card li {
+  background-color: black;
+}
+
+#black-card li a {
+  color: white;
 }
 
 #nickname-div { color: grey; margin-left: 410px; margin-top: 40px; }
