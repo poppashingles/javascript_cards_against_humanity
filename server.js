@@ -55,15 +55,54 @@ io.on('connection', function(socket){
   });
 
   socket.on('white card', function(card){
-    // player.cards.removeEventListener('click')
-    selectedCards.push(card);
+
+    let selectingPlayer = newGame.getPlayer(socket.id)
+    // io.emit('selected white cards', {card: card, selectingPlayer: selectingPlayer} )
+
+    selectedCards.push({card: card, selectingPlayer: selectingPlayer});
+    let index = selectingPlayer.cards.indexOf(card);
+    selectingPlayer.cards.splice(index, 1);
     console.log(selectedCards);
     if(selectedCards.length === players.length - 1) {
       io.emit('selected white cards', selectedCards);
     }
+
+
   })
+
+  socket.on('czar selects winning card', function(data) {
+    console.log("CZAR selected a winning card");
+    let winnerOfRound = newGame.getPlayer(data.player.id)
+    winnerOfRound.addPoint()
+    io.emit('winner chosen')
+    selectedCards = [];
+
+    // if game over
+
+
+    // new round
+
+
+    newGame.fillPlayerHands()
+    newGame.setCardCzar()
+
+
+    newGame.players.forEach(function(player) {
+      io.to(player.id).emit('cards given', player.cards)
+      if (player.isCardCzar){
+        io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
+      }else{
+        io.to(player.id).emit('czar confirm', `${player.username}, select a card to play`);
+      };
+    });
+    io.emit('black card', newGame.getBlackCard());
+    io.emit('announce winner')
+
+  });
+
   socket.on('new game', function(msg){
     selectedCards = [];
+
     players.forEach(function(player){
       const newPlayer = new Player(player.name, player.id)
       newGame.addPlayer(newPlayer);
@@ -79,9 +118,9 @@ io.on('connection', function(socket){
     });
     io.emit('black card', newGame.getBlackCard());
 
-    socket.on('declare winner', function(selectedWhiteCard) {
-      console.log(selectedWhiteCard)
-    })
+
+
+
 
 
 

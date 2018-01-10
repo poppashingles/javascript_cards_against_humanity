@@ -92,7 +92,14 @@ Game.prototype.getWinner = function(){
       return person;
     }
   }
-;}
+}
+Game.prototype.getPlayer = function (id) {
+  for(person of this.players) {
+    if(person.id === id) {
+      return person
+    }
+  }
+};
 
 Game.prototype.reset = function(){
   // Reset the game state (for after a game ends)

@@ -1,6 +1,7 @@
 const io = require("socket.io-client")
 
 const app = function() {
+  let selectedCard = false;
   const socket = io();
 
   socket.on('connect', function() {
@@ -70,6 +71,7 @@ const app = function() {
 
   socket.on('cards given', function(cards) {
     const white_Cards = document.querySelector('#white-cards')
+    white_Cards.innerHTML = ''
     cards.forEach(function(card) {
       const li = document.createElement('li')
       const anchor = document.createElement('a')
@@ -79,9 +81,14 @@ const app = function() {
       white_Cards.appendChild(li)
       li.addEventListener('click', function(evt){
         evt.preventDefault();
-        socket.emit('white card', card)
-        console.log("card clicked");
-        console.log(card);
+
+
+        if(!selectedCard) {
+            socket.emit('white card', card)
+            selectedCard = true;
+
+        }
+
       })
 
     })
@@ -110,6 +117,7 @@ const app = function() {
 
 
 
+<<<<<<< HEAD
   socket.on('selected white card', function(selectedWhiteCard){
     const ul = document.querySelector('#black-card');
     ul.style.visibility = 'visible';
@@ -120,6 +128,53 @@ const app = function() {
     li.appendChild(anchor);
     ul.appendChild(li)
     console.log(selectedWhiteCard);
+=======
+  socket.on('selected white cards', function(selectedCards){
+    console.log(JSON.stringify(selectedCards));
+
+
+    const ul = document.querySelector('#selected-white-cards');
+    ul.style.visibility = 'visible';
+
+    selectedCards.forEach(function(card) {
+      let selectedWhiteCard = card.card;
+      let player = card.selectingPlayer;
+      const li = document.createElement('li');
+      li.id = "selected-card"
+      const anchor = document.createElement('a');
+      anchor.style.visibility = 'visible';
+      anchor.innerText = selectedWhiteCard;
+      li.appendChild(anchor);
+      ul.appendChild(li)
+
+      li.addEventListener('click', function(evt) {
+        evt.preventDefault()
+        // console.log(evt);
+        socket.emit('czar selects winning card', { card: selectedWhiteCard, player: player})
+        selectedCard = false
+        li.remove()
+
+      })
+    })
+
+    socket.on('winner chosen', function(){
+      const ul = document.querySelector('#selected-white-cards');
+      while (ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+      }
+    })
+
+    // socket.on('announce winner', function(selectedCards) {
+    //   // const p = document.querySelector('#declare-winner')
+    //   // p.innerText = message
+    //   selectedCards.innerHTML = ''
+    // })
+
+    // const li = document.querySelector('#selected-card')
+
+
+
+>>>>>>> development
   });
 
 
