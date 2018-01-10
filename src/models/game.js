@@ -23,7 +23,7 @@ Game.prototype.addPlayer = function(player){
   this.players.push(player)
 };
 
-Game.prototype.fillPlayerHands = function(){
+Game.prototype.dealWhiteCards = function(){
   //player variable name is taken so used person as alternative naming
   for (person of this.players){
       while(person.cards.length < 10) {
@@ -72,7 +72,6 @@ Game.prototype.newRound = function(){
   }else{
     this.fillPlayerHands();
     this.setCardCzar();
-    this.getBlackCard();
   }
 }
 
@@ -86,15 +85,14 @@ Game.prototype.isGameOver = function(){
     return false;
 };
 
-Game.prototype.declareWinner = function(){
+Game.prototype.getWinner = function(){
   for (person of this.players){
     if (person.score === maxPoints)
     {
-      return `${person.username}, congratulations, you are the winner!`
+      return person;
     }
   }
 }
-
 Game.prototype.getPlayer = function (id) {
   for(person of this.players) {
     if(person.id === id) {
@@ -103,19 +101,24 @@ Game.prototype.getPlayer = function (id) {
   }
 };
 
-
+Game.prototype.reset = function(){
+  // Reset the game state (for after a game ends)
+  this.blackCards = rawdata.data.blackCards;
+  this.whiteCards = rawdata.data.whiteCards;
+  for (person of this.players){
+    {
+      person.reset();
+    }
+  }
+};
 
 Game.prototype.startGame = function(){
   // this.addPlayer() TODO: need to get usernames from clientside, convert to Player objects and add to Game.
   this.shuffleCards(this.blackCards);
   this.shuffleCards(this.whiteCards);
-  this.newRound()
-
-
-  //     //8888: logic for allowing players to select white card to play?
-  //     //8888: logic for allowing czar to pick winner.
-  //     //8888: winning player needs have addPoint function ran on them.
-  }
+  this.dealWhiteCards();
+  this.setCardCzar();
+};
 
 
 

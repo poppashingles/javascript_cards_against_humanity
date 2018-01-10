@@ -5,6 +5,7 @@ const app = function() {
   const socket = io();
 
   socket.on('connect', function() {
+    console.log('connected');
 
     const buttonForm = document.querySelector('#click-form');
 
@@ -64,6 +65,7 @@ const app = function() {
     socket.emit('new game');
     startButton.style.display = 'none';
     blackCard.style.display = 'block';
+    console.log('start button clicked');
 
   });
 
@@ -79,6 +81,8 @@ const app = function() {
       white_Cards.appendChild(li)
       li.addEventListener('click', function(evt){
         evt.preventDefault();
+
+
         if(!selectedCard) {
             socket.emit('white card', card)
             selectedCard = true;
@@ -108,10 +112,23 @@ const app = function() {
     anchor.innerText = blackCard
     li.appendChild(anchor)
     ul.appendChild(li)
+    console.log(blackCard);
   });
 
 
 
+<<<<<<< HEAD
+  socket.on('selected white card', function(selectedWhiteCard){
+    const ul = document.querySelector('#black-card');
+    ul.style.visibility = 'visible';
+    const li = document.createElement('li');
+    const anchor = document.createElement('a');
+    anchor.style.visibility = 'visible';
+    anchor.innerText = selectedWhiteCard;
+    li.appendChild(anchor);
+    ul.appendChild(li)
+    console.log(selectedWhiteCard);
+=======
   socket.on('selected white cards', function(selectedCards){
     console.log(JSON.stringify(selectedCards));
 
@@ -157,9 +174,8 @@ const app = function() {
 
 
 
+>>>>>>> development
   });
-
-
 
 
 }

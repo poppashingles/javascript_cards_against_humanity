@@ -15,6 +15,12 @@ Player.prototype.addPoint = function(){
   this.score++;
 }
 
+Player.prototype.reset = function(){
+  this.score = 0;
+  this.cards = [];
+  this.isCardCzar = false;
+}
+
 module.exports = Player;
 
 
