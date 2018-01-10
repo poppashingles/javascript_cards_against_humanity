@@ -57,11 +57,11 @@ const app = function() {
   })
 
   startButton.addEventListener('click', function(evt) {
+    console.log(`Emitting 'new game'`);
     socket.emit('new game');
     startButton.style.display = 'none';
     blackCard.style.display = 'block';
     console.log('start button clicked');
-
   });
 
   socket.on('cards dealt', function(cards) {
@@ -77,11 +77,8 @@ const app = function() {
       li.addEventListener('click', function(evt){
         evt.preventDefault();
 
-        // if(!selectedCard) {
         console.log(`Emitting 'answer played' >> ${card}`);
-            socket.emit('answer played', card)
-            // selectedCard = true;
-        // }
+        socket.emit('answer played', card)
       })
     })
   })
@@ -106,8 +103,6 @@ const app = function() {
   });
 
   socket.on('all answers played', function(selectedCards){
-    // console.log(JSON.stringify(selectedCards));
-
     const ul = document.querySelector('#selected-white-cards');
     // Reset the answer board as we're about to redraw
     ul.innerHTML = '';
@@ -127,8 +122,8 @@ const app = function() {
       li.addEventListener('click', function(evt) {
         evt.preventDefault()
 
+        console.log(`Emitting 'czar selects winning card'`);
         socket.emit('czar selects winning card', { card: selectedWhiteCard, player: player})
-        // selectedCard = false
         li.remove()
       })
     })
@@ -140,18 +135,12 @@ const app = function() {
       }
     })
 
-    // socket.on('announce winner', function(selectedCards) {
-    //   // const p = document.querySelector('#declare-winner')
-    //   // p.innerText = message
-    //   selectedCards.innerHTML = ''
-    // })
-
-    // const li = document.querySelector('#selected-card')
-
-});
-
-
-
+    socket.on('announce game winner', function(winner) {
+      const p = document.querySelector('#declare-winner')
+      p.innerText = `AND THE WINNER IS....${winner.username}!!!`
+      selectedCards.innerHTML = ''
+    })
+  });
 }
 
 document.addEventListener("DOMContentLoaded", app)

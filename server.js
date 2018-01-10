@@ -76,23 +76,25 @@ io.on('connection', function(socket){
     selectedCards = [];
 
     // if game over
+    if (newGame.isGameOver()){
+      let winner = newGame.getWinner();
+      io.emit('announce game winner', winner);
+    }else{
+      // new round
+      newGame.dealWhiteCards()
+      newGame.setCardCzar()
 
-    // new round
-
-    newGame.dealWhiteCards()
-    newGame.setCardCzar()
-
-    newGame.players.forEach(function(player) {
-      io.to(player.id).emit('cards dealt', player.cards)
-      if (player.isCardCzar){
-        io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
-      }else{
-        io.to(player.id).emit('czar confirm', `${player.username}, select a card to play`);
-      };
-    });
-    io.emit('black card', newGame.getBlackCard());
-    io.emit('announce winner')
-
+      newGame.players.forEach(function(player) {
+        io.to(player.id).emit('cards dealt', player.cards)
+        if (player.isCardCzar){
+          io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
+        }else{
+          io.to(player.id).emit('czar confirm', `${player.username}, select a card to play`);
+        };
+      });
+      io.emit('black card', newGame.getBlackCard());
+      io.emit('announce winner')
+    }
   });
 
   socket.on('new game', function(msg){
