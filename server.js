@@ -83,7 +83,7 @@ io.on('connection', function(socket){
     // new round
 
 
-    newGame.fillPlayerHands()
+    newGame.dealWhiteCards()
     newGame.setCardCzar()
 
 

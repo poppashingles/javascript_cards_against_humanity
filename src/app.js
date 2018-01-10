@@ -115,20 +115,6 @@ const app = function() {
     console.log(blackCard);
   });
 
-
-
-<<<<<<< HEAD
-  socket.on('selected white card', function(selectedWhiteCard){
-    const ul = document.querySelector('#black-card');
-    ul.style.visibility = 'visible';
-    const li = document.createElement('li');
-    const anchor = document.createElement('a');
-    anchor.style.visibility = 'visible';
-    anchor.innerText = selectedWhiteCard;
-    li.appendChild(anchor);
-    ul.appendChild(li)
-    console.log(selectedWhiteCard);
-=======
   socket.on('selected white cards', function(selectedCards){
     console.log(JSON.stringify(selectedCards));
 
@@ -172,10 +158,8 @@ const app = function() {
 
     // const li = document.querySelector('#selected-card')
 
+});
 
-
->>>>>>> development
-  });
 
 
 }
