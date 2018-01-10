@@ -23,7 +23,7 @@ Game.prototype.addPlayer = function(player){
   this.players.push(player)
 };
 
-Game.prototype.fillPlayerHands = function(){
+Game.prototype.dealWhiteCards = function(){
   //player variable name is taken so used person as alternative naming
   for (person of this.players){
       while(person.cards.length < 10) {
