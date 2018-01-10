@@ -95,6 +95,14 @@ Game.prototype.declareWinner = function(){
   }
 }
 
+Game.prototype.getPlayer = function (id) {
+  for(person of this.players) {
+    if(person.id === id) {
+      return person
+    }
+  }
+};
+
 
 
 Game.prototype.startGame = function(){
