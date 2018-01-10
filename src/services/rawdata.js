@@ -18,7 +18,7 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "This is the way the world ends / This is the way the world ends / Not with a bang but with _.",
+      "text": "This is the way the world ends, This is the way the world ends, Not with a bang but with _.",
       "pick": 1
     },
     {
@@ -54,7 +54,7 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "What's the next Happy Meal&reg; toy?",
+      "text": "What's the next Happy Meal toy?",
       "pick": 1
     },
     {
@@ -90,27 +90,15 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "White people like _.",
-      "pick": 1
-    },
-    {
       "text": "_. Betcha can't have just one!",
       "pick": 1
     },
     {
-      "text": "War!<br><br>What is it good for?",
-      "pick": 1
-    },
-    {
-      "text": "BILLY MAYS HERE FOR _.",
+      "text": "War! What is it good for?",
       "pick": 1
     },
     {
       "text": "_. High five, bro.",
-      "pick": 1
-    },
-    {
-      "text": "During sex, I like to think about _.",
       "pick": 1
     },
     {
@@ -238,14 +226,6 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "And the Academy Award for _ goes to _.",
-      "pick": 2
-    },
-    {
-      "text": "For my next trick, I will pull _ out of _.",
-      "pick": 2
-    },
-    {
       "text": "_: Good to the last drop.",
       "pick": 1
     },
@@ -262,51 +242,7 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "I never truly understood _ until I encountered _.",
-      "pick": 2
-    },
-    {
-      "text": "Rumor has it that Vladimir Putin's favorite delicacy is _ stuffed with _.",
-      "pick": 2
-    },
-    {
-      "text": "Lifetime&reg; presents _, the story of _.",
-      "pick": 2
-    },
-    {
-      "text": "Make a haiku.",
-      "pick": 3
-    },
-    {
-      "text": "In M. Night Shyamalan's new movie, Bruce Willis discovers that _ had really been _ all along.",
-      "pick": 2
-    },
-    {
-      "text": "_ is a slippery slope that leads to _.",
-      "pick": 2
-    },
-    {
-      "text": "In a world ravaged by _, our only solace is _.",
-      "pick": 2
-    },
-    {
-      "text": "That's right, I killed _. How, you ask? _.",
-      "pick": 2
-    },
-    {
-      "text": "When I was tripping on acid, _ turned into _.",
-      "pick": 2
-    },
-    {
-      "text": "_ + _ = _.",
-      "pick": 3
-    },
-    {
-      "text": "What's the next superhero/sidekick duo?",
-      "pick": 2
-    },
-    {
-      "text": "Dear Abby,<br><br>I'm having some trouble with _ and would like your advice.",
+      "text": "Dear Abby, I'm having some trouble with _ and would like your advice.",
       "pick": 1
     },
     {
@@ -330,19 +266,11 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Step 1: _. Step 2: _. Step 3: Profit.",
-      "pick": 2
-    },
-    {
-      "text": "Here is the church<br>Here is the steeple<br>Open the doors<br>And there is _.",
+      "text": "Here is the church, Here is the steeple, Open the doors, And there is _.",
       "pick": 1
     },
     {
-      "text": "How did I lose my virginity?",
-      "pick": 1
-    },
-    {
-      "text": "During his childhood, Salvador Dal&iacute; produced hundreds of paintings of _.",
+      "text": "During his childhood, Salvador Dali produced hundreds of paintings of _.",
       "pick": 1
     },
     {
@@ -362,14 +290,6 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "What brought the orgy to a grinding halt?",
-      "pick": 1
-    },
-    {
-      "text": "When I pooped, what came out of my butt?",
-      "pick": 1
-    },
-    {
       "text": "In the distant future, historians will agree that _ marked the beginning of America's decline.",
       "pick": 1
     },
@@ -382,16 +302,8 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Michael Bay's new three-hour action epic pits _ against _.",
-      "pick": 2
-    },
-    {
       "text": "And I would have gotten away with it, too, if it hadn't been for _!",
       "pick": 1
-    },
-    {
-      "text": "In a pinch, _ can be a suitable substitute for _.",
-      "pick": 2
     },
     {
       "text": "What has been making life difficult at the nudist colony?",
@@ -410,14 +322,6 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "When all else fails, I can always masturbate to _.",
-      "pick": 1
-    },
-    {
-      "text": "An international tribunal has found _ guilty of _.",
-      "pick": 2
-    },
-    {
       "text": "In its new tourism campaign, Detroit proudly proclaims that it has finally eliminated _.",
       "pick": 1
     },
@@ -434,16 +338,8 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Dear Sir or Madam, We regret to inform you that the Office of _ has denied your request for _.",
-      "pick": 2
-    },
-    {
       "text": "The CIA now interrogates enemy agents by repeatedly subjecting them to _.",
       "pick": 1
-    },
-    {
-      "text": "_ would be woefully incomplete without _.",
-      "pick": 2
     },
     {
       "text": "During his midlife crisis, my dad got really into _.",
@@ -451,10 +347,6 @@ module.exports = {
     },
     {
       "text": "Before I run for president, I must destroy all evidence of my involvement with _.",
-      "pick": 1
-    },
-    {
-      "text": "My new favorite porn star is Joey \"_\" McGee.",
       "pick": 1
     },
     {
@@ -466,10 +358,6 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "My mom freaked out when she looked at my browser history and found _.com/_.",
-      "pick": 2
-    },
-    {
       "text": "The Five Stages of Grief: denial, anger, bargaining, _, acceptance.",
       "pick": 1
     },
@@ -478,20 +366,8 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "I went from _ to _, all thanks to _.",
-      "pick": 3
-    },
-    {
       "text": "Little Miss Muffet Sat on a tuffet, Eating her curds and _.",
       "pick": 1
-    },
-    {
-      "text": "This month's Cosmo: \"Spice up your sex life by bringing _ into the bedroom.\"",
-      "pick": 1
-    },
-    {
-      "text": "If God didn't want us to enjoy _, he wouldn't have given us _.",
-      "pick": 2
     },
     {
       "text": "My country, 'tis of thee, sweet land of _.",
@@ -500,10 +376,6 @@ module.exports = {
     {
       "text": "After months of debate, the Occupy Wall Street General Assembly could only agree on \"More _!\"",
       "pick": 1
-    },
-    {
-      "text": "I spent my whole life working toward _, only to have it ruined by _.",
-      "pick": 2
     },
     {
       "text": "Next time on Dr. Phil: How to talk to your child about _.",
@@ -530,16 +402,8 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Before _, all we had was _.",
-      "pick": 2
-    },
-    {
       "text": "Tonight on 20/20: What you don't know about _ could kill you.",
       "pick": 1
-    },
-    {
-      "text": "You haven't truly lived until you've experienced _ and _ at the same time.",
-      "pick": 2
     },
     {
       "text": "Hey baby, come back to my place and I'll show you _.",
@@ -558,10 +422,6 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "My life is ruled by a vicious cycle of _ and _.",
-      "pick": 2
-    },
-    {
       "text": "During high school, I never really fit in until I found _ club.",
       "pick": 1
     },
@@ -570,15 +430,7 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Listen, son. If you want to get involved with _, I won't stop you. Just steer clear of _.",
-      "pick": 2
-    },
-    {
       "text": "A successful job interview begins with a firm handshake and ends with _.",
-      "pick": 1
-    },
-    {
-      "text": "Call the law offices of Goldstein &amp; Goldstein, because no one should have to tolerate _ in the workplace.",
       "pick": 1
     },
     {
@@ -598,10 +450,6 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "After months of practice with _, I think I'm finally ready for _.",
-      "pick": 2
-    },
-    {
       "text": "In the seventh circle of Hell, sinners must endure _ for all eternity.",
       "pick": 1
     },
@@ -610,28 +458,12 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "When you get right down to it, _ is just _.",
-      "pick": 2
-    },
-    {
-      "text": "Having problems with _? Try _!",
-      "pick": 2
-    },
-    {
-      "text": "And what did <i>you</i> bring for show and tell?",
+      "text": "And what did you bring for show and tell?",
       "pick": 1
     },
     {
       "text": "I'm not like the rest of you. I'm too rich and busy for _.",
       "pick": 1
-    },
-    {
-      "text": "With enough time and pressure, _ will turn into _.",
-      "pick": 2
-    },
-    {
-      "text": "_: Hours of fun. Easy to use. Perfect for _!",
-      "pick": 2
     },
     {
       "text": "_. Awesome in theory, kind of a mess in practice.",
@@ -642,23 +474,11 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Man, this is bullshit. Fuck _.",
+      "text": "Dear Leader Kim Jong-un, our village praises your infinite wisdom with a humble offering of _.",
       "pick": 1
     },
     {
-      "text": "Dear Leader Kim Jong-un,<br>our village praises your infinite wisdom with a humble offering of _.",
-      "pick": 1
-    },
-    {
-      "text": "_ may pass, but _ will last forever.",
-      "pick": 2
-    },
-    {
-      "text": "She's up all night for good fun.<br>I'm up all night for _.",
-      "pick": 1
-    },
-    {
-      "text": "Alright, bros. Our frat house is condemned, and all the hot slampieces are over at Gamma Phi. The time has come to commence Operation _.",
+      "text": "She's up all night for good fun. I'm up all night for _.",
       "pick": 1
     },
     {
@@ -666,39 +486,15 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "In return for my soul, the Devil promised me _, but all I got was _.",
-      "pick": 2
-    },
-    {
-      "text": "You guys, I saw this crazy movie last night. It opens on _, and then there's some stuff about _, and then it ends with _.",
-      "pick": 3
-    },
-    {
-      "text": "_ will never be the same after _.",
-      "pick": 2
-    },
-    {
       "text": "Wes Anderson's new film tells the story of a precocious child coming to terms with _.",
       "pick": 1
-    },
-    {
-      "text": "In the beginning, there was _.<br>And the Lord said, \"Let there be _.\"",
-      "pick": 2
     },
     {
       "text": "What's fun until it gets weird?",
       "pick": 1
     },
     {
-      "text": "We never did find _, but along the way we sure learned a lot about _.",
-      "pick": 2
-    },
-    {
-      "text": "You've seen the bearded lady!<br>You've seen the ring of fire!<br>Now, ladies and gentlemen, feast your eyes upon _!",
-      "pick": 1
-    },
-    {
-      "text": "How am I compensating for my tiny penis?",
+      "text": "You've seen the bearded lady! You've seen the ring of fire! Now, ladies and gentlemen, feast your eyes upon _!",
       "pick": 1
     },
     {
@@ -706,36 +502,12 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "2 AM in the city that never sleeps. The door swings open and <i>she</i> walks in, legs up to here. Something in her eyes tells me she's looking for _.",
-      "pick": 1
-    },
-    {
       "text": "As king, how will I keep the peasants in line?",
       "pick": 1
     },
     {
-      "text": "Oprah's book of the month is \"_ For _: A Story of Hope.\"",
-      "pick": 2
-    },
-    {
-      "text": "Do <i>not</i> fuck with me! I am literally _ right now.",
-      "pick": 1
-    },
-    {
-      "text": "Adventure.<br>Romance.<br>_.<br><br>From Paramount Pictures, \"_.\"",
-      "pick": 2
-    },
-    {
-      "text": "I am become _, destroyer of _!",
-      "pick": 2
-    },
-    {
       "text": "It lurks in the night. It hungers for flesh. This summer, no one is safe from _.",
       "pick": 1
-    },
-    {
-      "text": "If you can't handle _, you'd better stay away from _.",
-      "pick": 2
     },
     {
       "text": "This is the prime of my life. I'm young, hot, and full of _.",
@@ -746,23 +518,7 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "This year's hottest album is \"_\" by _.",
-      "pick": 2
-    },
-    {
-      "text": "Every step towards _ gets me a little closer to _.",
-      "pick": 2
-    },
-    {
-      "text": "Forget everything you know about _, because now we've supercharged it with _!",
-      "pick": 2
-    },
-    {
-      "text": "Honey, I have a new role-play I want to try tonight! You can be _, and I'll be _.",
-      "pick": 2
-    },
-    {
-      "text": "Do the Dew &reg; with our most extreme flavor yet! Get ready for Mountain Dew _!",
+      "text": "Do the Dew with our most extreme flavor yet! Get ready for Mountain Dew _!",
       "pick": 1
     },
     {
@@ -782,10 +538,6 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Heed my voice, mortals! I am the god of _, and I will not tolerate _!",
-      "pick": 2
-    },
-    {
       "text": "I don't mean to brag, but they call me the Michael Jordan of _.",
       "pick": 1
     },
@@ -794,16 +546,8 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Help me doctor, I've got _ in my butt!",
-      "pick": 1
-    },
-    {
       "text": "Hi MTV! My name is Kendra, I live in Malibu, I'm into _, and I love to have a good time.",
       "pick": 1
-    },
-    {
-      "text": "Patient presents with _. Likely a result of _.",
-      "pick": 2
     },
     {
       "text": "Life's pretty tough in the fast lane. That's why I never leave the house without _.",
@@ -826,44 +570,20 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Don't forget! Beginning this week, Casual Friday will officially become \"_ Friday.\"",
-      "pick": 1
-    },
-    {
-      "text": "What killed my boner?",
-      "pick": 1
-    },
-    {
       "text": "Yo' mama so fat she _!",
       "pick": 1
     },
     {
-      "text": "Well if _ is good enough for _, it's good enough for me.",
-      "pick": 2
-    },
-    {
-      "text": "Hi, this is Jim from accounting. We noticed a $1,200 charge labeled \"_\". Can you explain?",
+      "text": "Hi, this is Jim from accounting. We noticed a $1,200 charge labeled '_'. Can you explain?",
       "pick": 1
     },
     {
-      "text": "Do you lack energy? Does it sometimes feel like the whole world is _? Zoloft.&reg;",
-      "pick": 1
-    },
-    {
-      "text": "WHOOO! God damn I love _!",
-      "pick": 1
-    },
-    {
-      "text": "Now in bookstores: \"The Audacity of _\", by Barack Obama.",
+      "text": "Do you lack energy? Does it sometimes feel like the whole world is _? Zoloft.",
       "pick": 1
     },
     {
       "text": "And today's soup is Cream of _.",
       "pick": 1
-    },
-    {
-      "pick": 1,
-      "text": "I work my ass off all day for this family, and this is what I come home to? _!?"
     },
     {
       "pick": 1,
@@ -907,10 +627,6 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "\"This is madness.\" \"No, THIS IS _!\""
-    },
-    {
-      "pick": 1,
       "text": "Listen Gary, I like you. But if you want that corner office, you're going to have to show me _."
     },
     {
@@ -927,10 +643,6 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "Why won't you make love to me anymore? Is it _?"
-    },
-    {
-      "pick": 1,
       "text": "Puberty is a time of change. You might notice hair growing in new places. You might develop an interest in _. This is normal."
     },
     {
@@ -940,10 +652,6 @@ module.exports = {
     {
       "pick": 1,
       "text": "I'm Miss Tennessee, and if I could make the world better by changing one thing, I would get rid of _."
-    },
-    {
-      "pick": 1,
-      "text": "Tonight we will have sex. And afterwards, If you'd like, a little bit of _."
     },
     {
       "pick": 1,
@@ -962,16 +670,8 @@ module.exports = {
       "text": "If you had to describe the Card Czar, using only one of the cards in your hand, which one would it be?"
     },
     {
-      "pick": 2,
-      "text": "_ be all like _."
-    },
-    {
       "pick": 1,
       "text": "Art isn't just a painting in a stuffy museum. Art is alive. Art is _."
-    },
-    {
-      "pick": 1,
-      "text": "As reparations for slavery, all African Americans will receive _."
     },
     {
       "pick": 1,
@@ -987,7 +687,7 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "Coming to Red Lobster&reg; this month, _."
+      "text": "Coming to Red Lobster this month, _."
     },
     {
       "pick": 1,
@@ -1023,14 +723,6 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "I may not be much to look at, but I fuck like _."
-    },
-    {
-      "pick": 1,
-      "text": "I tell you, it was a non-stop fuckfest. When it was over, my asshole looked like _."
-    },
-    {
-      "pick": 1,
       "text": "I'll take the BBQ bacon burger with friend egg and fuck it how about _."
     },
     {
@@ -1047,15 +739,7 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "In the 1950s, psychologists prescribed _ as a cure for homosexually."
-    },
-    {
-      "pick": 1,
       "text": "LSD + _ = really bad time."
-    },
-    {
-      "pick": 1,
-      "text": "\"Mom's to-do list:<br/>- Buy Groceries.<br/>- Clean up _.<br/>- Soccer Practice.\""
     },
     {
       "pick": 1,
@@ -1072,10 +756,6 @@ module.exports = {
     {
       "pick": 1,
       "text": "One more thing. Watch out for Big Mike. They say he killed a man with _."
-    },
-    {
-      "pick": 1,
-      "text": "Ooo, daddy like _."
     },
     {
       "pick": 1,
@@ -1103,10 +783,6 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "\"The top Google auto-complete results for \"Barack Obama\":</br>- Barack Obama Height.</br>- Barack Obama net worth.</br>- Barack Obama _.\""
-    },
-    {
-      "pick": 1,
       "text": "Then the princess kissed the frog, and all of a sudden the frog was _!"
     },
     {
@@ -1127,19 +803,7 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "Well, shit. My eyes ain't so good, but I'll eat my own boot if that ain't _!"
-    },
-    {
-      "pick": 1,
       "text": "What are all those whales singing about?"
-    },
-    {
-      "pick": 1,
-      "text": "What sucks balls?"
-    },
-    {
-      "pick": 1,
-      "text": "What totally destroyed my asshole?"
     },
     {
       "pick": 1,
@@ -1159,35 +823,11 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "What's the gayest?"
-    },
-    {
-      "pick": 1,
       "text": "What's the most problematic?"
     },
     {
       "pick": 1,
-      "text": "Why am I laughing and crying and taking off my clothes?"
-    },
-    {
-      "pick": 1,
       "text": "With a one-time gift of just $10, you can save this child from _."
-    },
-    {
-      "pick": 1,
-      "text": "You know who else liked _? Hitler."
-    },
-    {
-      "pick": 1,
-      "text": "You won't believe what's in my pussy. It's _."
-    },
-    {
-      "text": "Siskel and Ebert have panned _ as \"poorly conceived\" and \"sloppily executed.\"",
-      "pick": 1
-    },
-    {
-      "text": "Up next on Nickelodeon: \"Clarissa Explains _.\"",
-      "pick": 1
     },
     {
       "text": "Believe it or not, Jim Carrey can do a dead-on impression of _.",
@@ -1206,16 +846,8 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "Tonight on SNICK: \"Are You Afraid of _?\"",
-      "pick": 1
-    },
-    {
       "pick": 1,
-      "text": "And in the end, the dragon was not evil; he just wanted _."
-    },
-    {
-      "pick": 2,
-      "text": "Critics are raving about HBO's new <i>Game of Thrones</i> spin-off, \"_ of _.\""
+      "text": "And in the end, the dragon was not evil, he just wanted _."
     },
     {
       "pick": 1,
@@ -1235,31 +867,11 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "I'm Bobby Flay, and if you can't stand _, get out of the kitchen!"
-    },
-    {
-      "pick": 1,
       "text": "It's not delivery. It's _."
     },
     {
       "pick": 1,
-      "text": "Aw babe, your burps smell like _!"
-    },
-    {
-      "pick": 1,
-      "text": "Don't miss Rachel Ray's hit new show, <i>Cooking with _</i>."
-    },
-    {
-      "pick": 1,
       "text": "Excuse me, waiter. Could take this back? This soup tastes like _."
-    },
-    {
-      "pick": 1,
-      "text": "Now on Netflix: <i>Jiro Dreams of _</i>."
-    },
-    {
-      "pick": 2,
-      "text": "In line with our predictions, we find a robust correlation between _ and _ (p&gt;.05)."
     },
     {
       "pick": 1,
@@ -1270,10 +882,6 @@ module.exports = {
       "text": "A study published in Nature this week found that _ is good for you in small doses."
     },
     {
-      "pick": 2,
-      "text": "In an attempt to recreate conditions just after the Big Bang, physicists at the LHC are observing collisions between _ and _."
-    },
-    {
       "pick": 1,
       "text": "What really killed the dinosaurs?"
     },
@@ -1282,16 +890,8 @@ module.exports = {
       "text": "Hey there, Young Scientists! Put on your labcoats and strap on your safety goggles, because today we're learning about _!"
     },
     {
-      "pick": 2,
-      "text": "Today on MythBusters, we found out how long _ can withstand _."
-    },
-    {
       "pick": 1,
       "text": "Don't worry, Penny! Go Go Gadget _!"
-    },
-    {
-      "pick": 2,
-      "text": "I need you like _ needs _."
     },
     {
       "pick": 1,
@@ -1299,11 +899,7 @@ module.exports = {
     },
     {
       "pick": 1,
-      "text": "Nothing says \"I love you\" like _."
-    },
-    {
-      "pick": 2,
-      "text": "Such _. Very _. Wow."
+      "text": "Nothing says 'I love you' like _."
     },
     {
       "pick": 1,
@@ -1312,10 +908,6 @@ module.exports = {
     {
       "pick": 1,
       "text": "TRIGGER WARNING: _."
-    },
-    {
-      "pick": 1,
-      "text": "What did I nickname my genitals?"
     },
     {
       "pick": 1,
@@ -1334,276 +926,12 @@ module.exports = {
       "text": "Trump's great!  Trump's got _.  I love that."
     },
     {
-      "pick": 1,
-      "text": "According to Arizona's stand-your-ground law, you're allowed to shoot someone if they're _."
-    },
-    {
-      "pick": 1,
-      "text": "It's 3AM.  The red phone rings.  It's _.  Who do you want answering?"
-    },
-    {
-      "pick": 1,
-      "text": "Donald Trump has nominated _ for his VP."
-    },
-    {
-      "pick": 1,
-      "text": "In 2019, Donald Trump eliminated our national parks to make room for _."
-    },
-    {
-      "pick": 1,
-      "text": "Donald Trump's first act as president was to outlaw _."
-    },
-    {
-      "text": "After blacking out during New Year's Eve, I was awoken by _.",
-      "pick": 1
-    },
-    {
-      "text": "This holiday season, Tim Allen must overcome his fear of _ to save Christmas.",
-      "pick": 1
-    },
-    {
-      "text": "Jesus is _.",
-      "pick": 1
-    },
-    {
-      "text": "Every Christmas, my uncle gets drunk and tells the story about _.",
-      "pick": 1
-    },
-    {
-      "text": "What keeps me warm during the cold, cold winter?",
-      "pick": 1
-    },
-    {
-      "text": "On the third day of Christmas, my true love gave to me: three French hens, two turtle doves, and _.",
-      "pick": 1
-    },
-    {
-      "text": "Wake up, America. Christmas is under attack by secular liberals and their _.",
-      "pick": 1
-    },
-    {
-      "text": "Here's what you can expect for the new year.<br>Out: _.<br>In: _.",
-      "pick": 2
-    },
-    {
-      "text": "Revealed:<br>Why He Really Resigned!<br>Pope Benedict's Secret Struggle with _!",
-      "pick": 1
-    },
-    {
-      "text": "GREETINGS HUMANS<br><br>I AM _ BOT<br><br>EXECUTING PROGRAM",
-      "pick": 1
-    },
-    {
-      "text": "Kids these days with their iPods and their Internet. In my day, all we needed to pass the time was _.",
-      "pick": 1
-    },
-    {
-      "text": "Because they are forbidden from masturbating, Mormons channel their repressed sexual energy into _.",
-      "pick": 1
-    },
-    {
-      "text": "Blessed are you, Lord our God, creator of the universe, who has granted us _.",
-      "pick": 1
-    },
-    {
-      "text": "But wait, there's more! If you order _ in the next 15 minutes, we'll throw in _ absolutely free!",
-      "pick": 2
-    },
-    {
-      "text": "What's the one thing that makes an elf instantly ejaculate?",
-      "pick": 1
-    },
-    {
-      "text": "I really hope my grandmother doesn't ask me to explain _ again.",
-      "pick": 1
-    },
-    {
-      "text": "You have been waylaid by _ and must defend yourself.",
-      "pick": 1
-    },
-    {
-      "text": "I have an idea even better than Kickstarter, and it's called _starter.",
-      "pick": 1
-    },
-    {
-      "text": "Action stations! Action stations! Set condition one throughout the fleet and brace for _!",
-      "pick": 1
-    },
-    {
-      "text": "In the final round of this year's Omegathon, Omeganauts must face off in a game of _.",
-      "pick": 1
-    },
-    {
-      "text": "Press &uarr; &darr; &larr; &rarr; B to unleash _.",
-      "pick": 1
-    },
-    {
-      "text": "I don't know exactly how I got the PAX plague, but I suspect it had something to do with _.",
-      "pick": 1
-    },
-    {
-      "text": "The most controversial game at PAX this year is an 8-bit indie platformer about _.",
-      "pick": 1
-    },
-    {
       "text": "What made Spock cry?",
       "pick": 1
     },
     {
-      "text": "In the new DLC for Mass Effect, Shepard must save the galaxy from _.",
-      "pick": 1
-    },
-    {
-      "text": "No Enforcer wants to manage the panel on _.",
-      "pick": 1
-    },
-    {
-      "text": "_: Achievement unlocked.",
-      "pick": 1
-    },
-    {
-      "text": "There was a riot at the Gearbox panel when they gave the attendees _.",
-      "pick": 1
-    },
-    {
-      "text": "What's the latest bullshit that's troubling this quaint fantasy town?",
-      "pick": 1
-    },
-    {
-      "text": "<i>(Heavy breathing)</i><br>Luke, I am _.",
-      "pick": 1
-    },
-    {
-      "text": "You think you have defeated me? Well, let's see how you handle _!",
-      "pick": 1
-    },
-    {
-      "text": "What the hell?! They added a 6/6 with flying, trample, and _.",
-      "pick": 1
-    },
-    {
-      "text": "_ is way better in _ mode.",
-      "pick": 2
-    },
-    {
-      "text": "Unfortunately, Neo, no one can be <i>told</i> what _ is. You have to see it for yourself.",
-      "pick": 1
-    },
-    {
-      "text": "Let me tell you about my new startup. It's basically _, but for _.",
-      "pick": 2
-    },
-    {
-      "text": "_ was totally worth the trauma.",
-      "pick": 1
-    },
-    {
-      "pick": 2,
-      "text": "Buzzfeed presents: 10 pictures of _ that look like _."
-    },
-    {
-      "pick": 1,
-      "text": "During my first game of D&amp;D, I accidentally summoned _."
-    },
-    {
-      "pick": 1,
-      "text": "Bob Ross's little-known first show was called &quot;The Joy of _.&quot;"
-    },
-    {
-      "pick": 1,
-      "text": "Like _, State Farm is there."
-    },
-    {
-      "pick": 1,
-      "text": "The Discovery Channel presents: _ week."
-    },
-    {
-      "pick": 1,
-      "text": "\"It's not delivery.<br/>It's _.\""
-    },
-    {
-      "pick": 1,
-      "text": "Don't miss Rachel Ray's hit new show, Cooking with _."
-    },
-    {
-      "pick": 1,
-      "text": "Now on Netflix: Jiro Dreams of _."
-    },
-    {
-      "text": "A wise man said, \"Everything is about sex. Except sex. Sex is about _.\"",
-      "pick": 1
-    },
-    {
-      "text": "Our relationship is strictly professional. Let's not complicate things with _.",
-      "pick": 1
-    },
-    {
-      "text": "Corruption. Betrayal. _. Coming soon to Netflix, \"House of _.\"",
-      "pick": 2
-    },
-    {
-      "text": "Because you enjoyed _, we thought you'd like _.",
-      "pick": 2
-    },
-    {
-      "text": "I can't believe Netflix is using _ to promote House of Cards.",
-      "pick": 1
-    },
-    {
-      "text": "We're not like other news organizations. Here at Slugline, we welcome _ in the office. ",
-      "pick": 1
-    },
-    {
-      "text": "I'm not going to lie. I despise _. There, I said it.",
-      "pick": 1
-    },
-    {
-      "text": "Cancel all my meetings. We've got a situation with _ that requires my immediate attention.",
-      "pick": 1
-    },
-    {
-      "text": "If you need him to, Remy Danton can pull some strings and get you _, but it'll cost you.",
-      "pick": 1
-    },
-    {
-      "pick": 1,
-      "text": "You can't wait forever. It's time to talk to your doctor about _."
-    },
-    {
-      "pick": 1,
-      "text": "The Westboro Baptist Church is now picketing soldiers' funerals with signs that read 'GOD HATES _.'"
-    },
-    {
-      "pick": 1,
-      "text": "What are two cards in your hand that you want to get rid of?"
-    },
-    {
-      "pick": 1,
-      "text": "The elders of the Ibo tribe of Nigeria recommend _ as a cure for impotence."
-    },
-    {
-      "pick": 1,
-      "text": "My name is Inigo Montoya. You killed my father. Prepare for _."
-    },
-    {
-      "pick": 1,
-      "text": "From WBEZ Chicago, it's This American Life. Today on our program, _. Stay with us."
-    },
-    {
-      "pick": 1,
-      "text": "What do you see?"
-    },
-    {
-      "pick": 1,
-      "text": "Sir, we found you passed out naked on the side of the road. What's the last thing you remember?"
-    },
-    {
       "pick": 1,
       "text": "Astronomers have discovered that the universe consists of 5% ordinary matter, 25% dark matter, and 70% _."
-    },
-    {
-      "pick": 1,
-      "text": "BowWOW! is the first pet hotel in LA that offers _ for dogs."
     },
     {
       "pick": 1,
@@ -1646,64 +974,39 @@ module.exports = {
       "pick": 1
     },
     {
-      "text": "CTV presents _, the story of _.",
-      "pick": 2
-    },
-    {
-      "text": "In an attempt to reach a wider audience, the Royal Ontario Museum has opened an interactive exhibit on _.",
-      "pick": 1
-    },
-    {
       "text": "What's the Canadian government using to inspire rural students to succeed?",
       "pick": 1
     }
   ],
   "whiteCards": [
-    "Coat hanger abortions.",
-    "Man meat.",
-    "Autocannibalism.",
     "Vigorous jazz hands.",
     "Flightless birds.",
-    "Pictures of boobs.",
     "Doing the right thing.",
     "The violation of our most basic human rights.",
-    "Viagra&reg;.",
+    "Viagra",
     "Self-loathing.",
     "Spectacular abs.",
     "A balanced breakfast.",
-    "Roofies.",
-    "Concealing a boner.",
-    "Amputees.",
     "The Big Bang.",
     "Former President George W. Bush.",
     "The Rev. Dr. Martin Luther King, Jr.",
-    "Smegma.",
     "Being marginalized.",
     "Cuddling.",
     "Laying an egg.",
     "The Pope.",
     "Aaron Burr.",
-    "Genital piercings.",
-    "Fingering.",
-    "A bleached asshole.",
     "Horse meat.",
     "Fear itself.",
     "Science.",
     "Elderly Japanese men.",
     "Stranger danger.",
     "The terrorists.",
-    "Praying the gay away.",
     "Same-sex ice dancing.",
-    "Ethnic cleansing.",
-    "Cheating in the Special Olympics.",
-    "German dungeon porn.",
-    "Bingeing and purging.",
     "Making a pouty face.",
     "William Shatner.",
     "Heteronormativity.",
     "Nickelback.",
     "Tom Cruise.",
-    "The profoundly handicapped.",
     "The placenta.",
     "Chainsaws for hands.",
     "Arnold Schwarzenegger.",
@@ -1711,7 +1014,6 @@ module.exports = {
     "Goblins.",
     "Object permanence.",
     "Dying.",
-    "Foreskin.",
     "A falcon with a cap on its head.",
     "Hormone injections.",
     "Dying of dysentery.",
@@ -1720,31 +1022,24 @@ module.exports = {
     "A really cool hat.",
     "Sean Penn.",
     "Heartwarming orphans.",
-    "The clitoris.",
     "The Three-Fifths compromise.",
-    "A sad handjob.",
     "Men.",
-    "Historically black colleges.",
-    "A micropenis.",
     "Raptor attacks.",
     "Agriculture.",
     "Vikings.",
     "Pretending to care.",
     "The Underground Railroad.",
     "My humps.",
-    "Being a dick to children.",
     "Geese.",
     "Bling.",
     "Sniffing glue.",
     "The South.",
     "An Oedipus complex.",
-    "Eating all of the cookies before the AIDS bake-sale.",
     "Sexting.",
     "YOU MUST CONSTRUCT ADDITIONAL PYLONS.",
     "Mutually-assured destruction.",
     "Sunshine and rainbows.",
     "Count Chocula.",
-    "Sharing needles.",
     "Being rich.",
     "Skeletor.",
     "A sausage festival.",
@@ -1752,49 +1047,30 @@ module.exports = {
     "Emotions.",
     "Farting and walking away.",
     "The Chinese gymnastics team.",
-    "Necrophilia.",
     "Spontaneous human combustion.",
     "Yeast.",
     "Leaving an awkward voicemail.",
     "Dick Cheney.",
-    "White people.",
     "Penis envy.",
     "Teaching a robot to love.",
     "Sperm whales.",
-    "Scrubbing under the folds.",
-    "Panda sex.",
-    "Whipping it out.",
-    "Catapults.",
-    "Masturbation.",
     "Natural selection.",
     "Opposable thumbs.",
-    "A sassy black woman.",
-    "AIDS.",
-    "The KKK.",
     "Figgy pudding.",
     "Seppuku.",
     "Gandhi.",
-    "Preteens.",
-    "Toni Morrison's vagina.",
-    "Five-Dollar Footlongs&trade;.",
     "Land mines.",
     "A sea of troubles.",
     "A zesty breakfast burrito.",
     "Christopher Walken.",
     "Friction.",
-    "Balls.",
-    "Dental dams.",
-    "A can of whoop-ass.",
     "A tiny horse.",
     "Waiting 'til marriage.",
     "Authentic Mexican cuisine.",
     "Genghis Khan.",
     "Old-people smell.",
     "Feeding Rosie O'Donnell.",
-    "Pixelated bukkake.",
     "Friends with benefits.",
-    "The token minority.",
-    "The Tempur-Pedic&reg; Swedish Sleep System&trade;.",
     "A thermonuclear detonation.",
     "Take-backsies.",
     "The Rapture.",
@@ -1812,62 +1088,36 @@ module.exports = {
     "The inevitable heat death of the universe.",
     "The folly of man.",
     "That thing that electrocutes your abs.",
-    "Cards Against Humanity.",
-    "Fiery poops.",
-    "Poor people.",
     "Edible underpants.",
     "Britney Spears at 55.",
     "All-you-can-eat shrimp for $4.99.",
-    "Pooping back and forth. Forever.",
-    "Fancy Feast&reg;.",
-    "Jewish fraternities.",
-    "Being a motherfucking sorcerer.",
-    "Pulling out.",
-    "Picking up girls at the abortion clinic.",
-    "The homosexual agenda.",
     "The Holy Bible.",
     "Passive-agression.",
     "Ronald Reagan.",
     "Vehicular manslaughter.",
-    "Nipple blades.",
-    "Assless chaps.",
-    "Full frontal nudity.",
-    "Hulk Hogan.",
-    "Daddy issues.",
-    "The hardworking Mexican.",
     "Natalie Portman.",
-    "Waking up half-naked in a Denny's parking lot.",
     "God.",
     "Sean Connery.",
     "Saxophone solos.",
-    "Gloryholes.",
     "The World of Warcraft.",
     "Homeless people.",
     "Scalping.",
     "Darth Vader.",
     "Eating the last known bison.",
     "Guys who don't call.",
-    "Hot Pockets&reg;.",
     "A time travel paradox.",
     "The milk man.",
-    "Testicular torsion.",
     "Dropping a chandelier on your enemies and riding the rope up.",
     "World peace.",
-    "A salty surprise.",
-    "Poorly-timed Holocaust jokes.",
     "Smallpox blankets.",
     "Licking things to claim them as your own.",
     "The heart of a child.",
     "Robert Downey, Jr.",
-    "Lockjaw.",
-    "Eugenics.",
     "A good sniff.",
     "Friendly fire.",
-    "The taint; the grundle; the fleshy fun-bridge.",
     "Wearing underwear inside-out to avoid doing laundry.",
     "Hurricane Katrina.",
     "Free samples.",
-    "Jerking off into a pool of children's tears.",
     "A foul mouth.",
     "The glass ceiling.",
     "Republicans.",
@@ -1876,26 +1126,13 @@ module.exports = {
     "Getting really high.",
     "Attitude.",
     "Sarah Palin.",
-    "The &Uuml;bermensch.",
     "Altar boys.",
     "My soul.",
-    "My sex life.",
-    "Pedophiles.",
-    "72 virgins.",
     "Pabst Blue Ribbon.",
-    "Domino's&trade; Oreo&trade; Dessert Pizza.",
-    "A snapping turtle biting the tip of your penis.",
-    "The Blood of Christ.",
-    "Half-assed foreplay.",
-    "My collection of high-tech sex toys.",
     "A middle-aged man on roller skates.",
-    "Bitches.",
     "Bill Nye the Science Guy.",
-    "Italians.",
     "A windmill full of corpses.",
-    "Adderall&trade;.",
     "Crippling debt.",
-    "A stray pube.",
     "Prancing.",
     "Passing a kidney stone.",
     "A brain tumor.",
@@ -1904,91 +1141,53 @@ module.exports = {
     "Bees?",
     "Frolicking.",
     "Repression.",
-    "Road head.",
     "A bag of magic beans.",
-    "An asymmetric boob job.",
-    "Dead parents.",
     "Public ridicule.",
     "A mating display.",
-    "A mime having a stroke.",
     "Stephen Hawking talking dirty.",
-    "African children.",
-    "Mouth herpes.",
     "Overcompensation.",
     "Riding off into the sunset.",
     "Being on fire.",
     "Tangled Slinkys.",
     "Civilian casualties.",
     "Auschwitz.",
-    "My genitals.",
-    "Not reciprocating oral sex.",
-    "Lactation.",
     "Being fabulous.",
     "Shaquille O'Neal's acting career.",
     "My relationship status.",
-    "Asians who aren't good at math.",
-    "Alcoholism.",
-    "Incest.",
     "Grave robbing.",
     "Hope.",
-    "8 oz. of sweet Mexican black-tar heroin.",
-    "Kids with ass cancer.",
     "Winking at old people.",
-    "The Jews.",
     "Justin Bieber.",
-    "Doin' it in the butt.",
     "A lifetime of sadness.",
     "The Hamburglar.",
     "Swooping.",
     "Classist undertones.",
     "New Age music.",
-    "Not giving a shit about the Third World.",
     "The Kool-Aid Man.",
     "A hot mess.",
-    "Tentacle porn.",
     "Lumberjack fantasies.",
-    "The gays.",
     "Scientology.",
     "Estrogen.",
-    "GoGurt&reg;.",
     "Judge Judy.",
-    "Dick fingers.",
     "Racism.",
-    "Surprise sex!",
     "Police brutality.",
-    "Passable transvestites.",
-    "The Virginia Tech Massacre.",
-    "When you fart and a little bit comes out.",
     "Oompa-Loompas.",
     "A fetus.",
     "Obesity.",
-    "Tasteful sideboob.",
     "Hot people.",
     "BATMAN!!!",
-    "Black people.",
     "A gassy antelope.",
     "Sexual tension.",
     "Third base.",
     "Racially-biased SAT questions.",
-    "Porn stars.",
-    "A Super Soaker&trade; full of cat pee.",
+    "A Super Soaker full of cat pee.",
     "Muhammed (Praise Be Unto Him).",
     "Puberty.",
     "A disappointing birthday party.",
-    "An erection that lasts longer than four hours.",
     "White privilege.",
-    "Getting so angry that you pop a boner.",
-    "Wifely duties.",
-    "Two midgets shitting into a bucket.",
-    "Queefing.",
-    "Wiping her butt.",
-    "Golden showers.",
     "Barack Obama.",
-    "Nazis.",
-    "A robust mongoloid.",
     "An M. Night Shyamalan plot twist.",
     "Getting drunk on mouthwash.",
-    "Lunchables&trade;.",
     "Women in yogurt commercials.",
     "John Wilkes Booth.",
     "Powerful thighs.",
@@ -1998,25 +1197,18 @@ module.exports = {
     "Serfdom.",
     "Kanye West.",
     "Women's suffrage.",
-    "Children on leashes.",
-    "Harry Potter erotica.",
     "The Dance of the Sugar Plum Fairy.",
-    "Lance Armstrong's missing testicle.",
     "Parting the Red Sea.",
     "The Amish.",
-    "Dead babies.",
     "Child beauty pageants.",
     "AXE Body Spray.",
     "Centaurs.",
-    "Copping a feel.",
     "Grandma.",
     "Famine.",
     "The Trail of Tears.",
     "The miracle of childbirth.",
     "Finger painting.",
     "A monkey smoking a cigar.",
-    "The Make-A-Wish&reg; Foundation.",
-    "Anal beads.",
     "The Force.",
     "Kamikaze pilots.",
     "Dry heaving.",
@@ -2029,10 +1221,6 @@ module.exports = {
     "The Care Bear Stare.",
     "Hot cheese.",
     "A mopey zoo lion.",
-    "A defective condom.",
-    "Teenage pregnancy.",
-    "A Bop It&trade;.",
-    "Expecting a burp and vomiting on the floor.",
     "Horrifying laser hair removal accidents.",
     "Boogers.",
     "Unfathomable stupidity.",
@@ -2040,13 +1228,8 @@ module.exports = {
     "Soup that is too hot.",
     "Morgan Freeman's voice.",
     "Getting naked and watching Nickelodeon.",
-    "MechaHitler.",
-    "Flying sex snakes.",
     "The true meaning of Christmas.",
     "My inner demons.",
-    "Pac-Man uncontrollably guzzling cum.",
-    "My vagina.",
-    "A homoerotic volleyball montage.",
     "Actually taking candy from a baby.",
     "Crystal meth.",
     "Exactly what you'd expect.",
@@ -2058,39 +1241,28 @@ module.exports = {
     "Vigilante justice.",
     "A death ray.",
     "Poor life choices.",
-    "A gentle caress of the inner thigh.",
     "Embryonic stem cells.",
     "Nicolas Cage.",
-    "Firing a rifle into the air while balls deep in a squealing hog.",
-    "Switching to Geico&reg;.",
-    "The chronic.",
-    "Erectile dysfunction.",
-    "Home video of Oprah sobbing into a Lean Cuisine&reg;.",
     "A bucket of fish heads.",
     "50,000 volts straight to the nipples.",
     "Being fat and stupid.",
-    "Hospice care.",
     "A pyramid of severed heads.",
     "Getting married, having a few kids, buying some stuff, retiring to Florida, and dying.",
     "A subscription to Men's Fitness.",
     "Crucifixion.",
     "A micropig wearing a tiny raincoat and booties.",
     "Some god-damn peace and quiet.",
-    "Used panties.",
     "A tribe of warrior women.",
-    "The penny whistle solo from \"My Heart Will Go On.\"",
+    "The penny whistle solo from 'My Heart Will Go On.'",
     "An oversized lollipop.",
     "Helplessly giggling at the mention of Hutus and Tutsis.",
     "Not wearing pants.",
-    "Consensual sex.",
     "Her Majesty, Queen Elizabeth II.",
     "Funky fresh rhymes.",
     "The art of seduction.",
     "The Devil himself.",
-    "Advice from a wise, old black man.",
     "Destroying the evidence.",
     "The light of a billion suns.",
-    "Wet dreams.",
     "Synergistic management solutions.",
     "Growing a pair.",
     "Silence.",
@@ -2098,11 +1270,8 @@ module.exports = {
     "Poopy diapers.",
     "A live studio audience.",
     "The Great Depression.",
-    "A spastic nerd.",
-    "Rush Limbaugh's soft, shitty body.",
     "Tickling Sean Hannity, even after he tells you to stop.",
     "Stalin.",
-    "Brown people.",
     "Rehab.",
     "Capturing Newt Gingrich and forcing him to dance in a monkey suit.",
     "Battlefield amputations.",
@@ -2110,16 +1279,11 @@ module.exports = {
     "Shiny objects.",
     "An ugly face.",
     "Menstrual rage.",
-    "A bitch slap.",
     "One trillion dollars.",
-    "Chunks of dead prostitute.",
     "The entire Mormon Tabernacle Choir.",
-    "The female orgasm.",
     "Extremely tight pants.",
     "The Boy Scouts of America.",
     "Stormtroopers.",
-    "Throwing a virgin into a volcano.",
-    "Getting in her pants, politely.",
     "Gladiatorial combat.",
     "Good grammar.",
     "Hipsters.",
@@ -2133,63 +1297,42 @@ module.exports = {
     "Finding a skeleton.",
     "Suicidal thoughts.",
     "Dancing with a broom.",
-    "Deflowering the princess.",
     "Dorito breath.",
     "One thousand Slim Jims.",
     "My machete.",
     "Overpowering your father.",
     "Ominous background music.",
     "Media coverage.",
-    "Making the penises kiss.",
     "Moral ambiguity.",
-    "Medieval Times&reg; Dinner &amp; Tournament.",
     "Mad hacky-sack skills.",
-    "Just the tip.",
-    "Literally eating shit.",
     "Leveling up.",
     "Insatiable bloodlust.",
     "Historical revisionism.",
     "Jean-Claude Van Damme.",
     "Jafar.",
-    "The boners of the elderly.",
     "The economy.",
     "Statistically validated stereotypes.",
     "Sudden Poop Explosion Disease.",
     "Slow motion.",
     "Space muffins.",
-    "Sexual humiliation.",
-    "Sexy Siamese twins.",
     "Santa Claus.",
-    "Scrotum tickling.",
     "Ripping into a man's chest and pulling out his still-beating heart.",
     "Ryan Gosling riding in on a white horse.",
     "Quivering jowls.",
-    "Revenge fucking.",
-    "Pistol-whipping a hostage.",
     "Quiche.",
-    "Zeus's sexual appetites.",
     "Words, words, words.",
-    "Tripping balls.",
     "Being a busy adult with many important things to do.",
     "The four arms of Vishnu.",
-    "The shambling corpse of Larry King.",
     "The hiccups.",
     "The harsh light of day.",
     "The Gulags.",
-    "The Fanta&reg; girls.",
-    "A big black dick.",
     "A beached whale.",
     "A low standard of living.",
     "A nuanced critique.",
-    "A bloody pacifier.",
     "A crappy little hand.",
     "Shaft.",
     "Being a dinosaur.",
-    "Beating your wives.",
     "Neil Patrick Harris.",
-    "Coughing into a vagina.",
-    "Carnies.",
-    "Nubile slave boys.",
     "Bosnian chicken farmers.",
     "A web of lies.",
     "A rival dojo.",
@@ -2200,13 +1343,6 @@ module.exports = {
     "A woman scorned.",
     "Spring break!",
     "Another shot of morphine.",
-    "Dining with cardboard cutouts of the cast of \"Friends.\"",
-    "A soulful rendition of 'Ol' Man River.'",
-    "Casting Magic Missile at a bully.",
-    "Running out of stamina.",
-    "An immediately regrettable $9 hot dog from the Boston Convention Center.",
-    "The rocket launcher.",
-    "Sharpening a foam broadsword on a foam whetstone.",
     "Loading from a previous save.",
     "The depression that ensues after catching 'em all.",
     "Violating the First Law of Robotics.",
@@ -2216,31 +1352,16 @@ module.exports = {
     "Wil Wheaton crashing an actual spaceship.",
     "The Klobb.",
     "Charging up all the way.",
-    "Vespene gas.",
-    "Judging elves by the color of their skin and not by the content of their character.",
-    "Smashing all the pottery in a Pottery Barn in search of rupees.",
-    "Achieving 500 actions per minute.",
-    "Full HD.",
-    "The gravity gun.",
     "Reading the comments.",
     "70,000 gamers sweating and farting inside an airtight steel dome.",
     "Mario Kart rage.",
-    "Bowser's aching heart.",
-    "An angry stone head that stomps on the floor every three seconds.",
     "Temporary invincibility.",
-    "Achieving the manual dexterity and tactical brilliance of a 12-year-old Korean boy.",
-    "Allowing nacho cheese to curdle in your beard while you creep in League of Legends.",
     "The collective wail of every Magic player suddenly realizing that they've spent hundreds of dollars on pieces of cardboard.",
     "Rolling a D20 to save a failing marriage.",
     "Never watching, discussing, or thinking about My Little Pony.",
     "Buying virtual clothes for a Sim family instead of real clothes for a real family.",
     "Google Glass + e-cigarette: Ultimate Combo!",
     "The decade of legal inquests following a single hour of Grand Theft Auto.",
-    "A fully-dressed female videogame character.",
-    "Getting into a situation with an owlbear.",
-    "Charles Barkley Shut Up and Jam!",
-    "The old gods.",
-    "Attacking from Kamchatka.",
     "Lagging out.",
     "A giant mechanical bird with a tragic backstory.",
     "The pure, Zen-like state that exists between micro and macro.",
@@ -2287,18 +1408,14 @@ module.exports = {
     "Canada: America's Hat.",
     "Burning down the White House.",
     "Heritage minutes.",
-    "Homo milk.",
     "Naked News.",
     "Mr. Dressup.",
-    "Syrupy sex with a maple tree.",
-    "Being Canadian.",
     "Snotsicles.",
     "The Famous Five.",
     "Schmirler the Curler.",
     "Stephen Harper.",
     "A Molson muscle.",
     "The Royal Canadian Mounted Police.",
-    "An icy handjob from an Edmonton hooker."
   ],
   "Base": {
     "name": "Base Set",

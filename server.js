@@ -54,20 +54,18 @@ io.on('connection', function(socket){
     io.emit('chat message', socket.nickname + ': ' + msg);
   });
 
-  socket.on('white card', function(card){
-
+  socket.on('answer played', function(card){
     let selectingPlayer = newGame.getPlayer(socket.id)
-    // io.emit('selected white cards', {card: card, selectingPlayer: selectingPlayer} )
-
+    console.log(`An answer has been played`);
     selectedCards.push({card: card, selectingPlayer: selectingPlayer});
+    console.log(`selectedCards: ${selectedCards}`);
     let index = selectingPlayer.cards.indexOf(card);
     selectingPlayer.cards.splice(index, 1);
-    console.log(selectedCards);
-    if(selectedCards.length === players.length - 1) {
-      io.emit('selected white cards', selectedCards);
-    }
 
-
+    // If all pending answers have been played
+    // if(selectedCards.length === players.length - 1) {
+      io.emit('all answers played', selectedCards);
+    // }
   })
 
   socket.on('czar selects winning card', function(data) {
@@ -79,16 +77,13 @@ io.on('connection', function(socket){
 
     // if game over
 
-
     // new round
-
 
     newGame.dealWhiteCards()
     newGame.setCardCzar()
 
-
     newGame.players.forEach(function(player) {
-      io.to(player.id).emit('cards given', player.cards)
+      io.to(player.id).emit('cards dealt', player.cards)
       if (player.isCardCzar){
         io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
       }else{
@@ -109,7 +104,7 @@ io.on('connection', function(socket){
     });
     newGame.startGame();
     newGame.players.forEach(function(player) {
-      io.to(player.id).emit('cards given', player.cards)
+      io.to(player.id).emit('cards dealt', player.cards)
       if (player.isCardCzar){
         io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
       }else{
@@ -118,17 +113,7 @@ io.on('connection', function(socket){
     });
     io.emit('black card', newGame.getBlackCard());
 
-
-
-
-
-
-
   });
-
-
-
-
 });
 
 const port = process.env.PORT || 3000;
