@@ -100,6 +100,7 @@ io.on('connection', function(socket){
 
 
   socket.on('new game', function(msg){
+    newGame = new Game()
     selectedCards = [];
 
     players.forEach(function(player){
