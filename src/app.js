@@ -124,10 +124,6 @@ const app = function() {
 
       li.addEventListener('click', function(evt) {
         evt.preventDefault()
-
-  })
-
-
         // console.log(`Emitting 'czar selects winning card'`);
         socket.emit('czar selects winning card', { card: selectedWhiteCard, player: player})
         li.remove()
