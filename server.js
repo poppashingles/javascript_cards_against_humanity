@@ -54,6 +54,7 @@ io.on('connection', function(socket){
     io.emit('chat message', socket.nickname + ': ' + msg);
   });
 
+
   socket.on('answer played', function(card){
     let selectingPlayer = newGame.getPlayer(socket.id)
     console.log(`An answer has been played`);
@@ -97,6 +98,7 @@ io.on('connection', function(socket){
     }
   });
 
+
   socket.on('new game', function(msg){
     selectedCards = [];
 
@@ -109,11 +111,13 @@ io.on('connection', function(socket){
       io.to(player.id).emit('cards dealt', player.cards)
       if (player.isCardCzar){
         io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
-      }else{
-        io.to(player.id).emit('czar confirm', `${player.username}, select a card to play`);
+
       };
     });
-    io.emit('black card', newGame.getBlackCard());
+
+    io.emit('black card', newGame.getBlackCard())
+
+
 
   });
 });

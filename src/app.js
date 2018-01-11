@@ -74,8 +74,10 @@ const app = function() {
       anchor.style.visibility = 'visible';
       li.appendChild(anchor)
       white_Cards.appendChild(li)
+
       li.addEventListener('click', function(evt){
         evt.preventDefault();
+
 
         console.log(`Emitting 'answer played' >> ${card}`);
         socket.emit('answer played', card)
@@ -100,6 +102,7 @@ const app = function() {
     anchor.innerText = blackCard
     li.appendChild(anchor)
     ul.appendChild(li)
+
   });
 
   socket.on('all answers played', function(selectedCards){
@@ -121,6 +124,9 @@ const app = function() {
 
       li.addEventListener('click', function(evt) {
         evt.preventDefault()
+
+  })
+
 
         console.log(`Emitting 'czar selects winning card'`);
         socket.emit('czar selects winning card', { card: selectedWhiteCard, player: player})
