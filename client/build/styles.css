@@ -1,11 +1,15 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
-body { font: 13px Helvetica, Arial; background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7) ), url("http://sm.ign.com/ign_in/news/c/cards-agai/cards-against-humanity-available-as-free-web-app_26qe.png"); }
+body {
+  font: 13px Helvetica, Arial; background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7) ), url('/images/cah.png');
+}
 #chat-send { background: #000; padding: 3px; bottom: 5px; width: 100%; border-radius: 5px; position: absolute; }
 #chat-send input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
 #chat-send button { width: 30%; background: #5cb85c; border: none; padding: 10px; color: white; }
 #messages { list-style-type: none; margin: 0; padding: 0; }
 #messages li { padding: 5px 10px; }
 #messages li:nth-child(odd) { background: #eee; }
+
+#declare-winner {color: white; font-size: 24px}
 
 #chat, #new-game-button, #side-nav-l, #side-nav-r { display: none; }
 
@@ -23,7 +27,7 @@ body { font: 13px Helvetica, Arial; background: linear-gradient( rgba(0, 0, 0, 0
 
 
 
-#white-cards li, #black-card {
+#white-cards li, #black-card li, #selected-white-cards li {
 
 text-align: center;
 vertical-align: middle;
@@ -36,23 +40,34 @@ display: inline-block;
 background-color: white;
 background-repeat: no-repeat;
 }
-#white-cards li a, #black-card {
+
+#white-cards li a, #black-card li a, #selected-white-cards li a {
   padding: 4px;
   color: black;
   font-size: 15px;
   font-family: 'helvetica neue';
-  margin-top: 100px;
+  padding-top: 100px;
   display: block;
   width: 164px;
   height: 230px;
   visibility: hidden;
 }
-#white-cards li a:hover {
+#white-cards li a:hover, #selected-white-cards li a:hover, #black-card li a:hover  {
   /*background-color: red;*/
   cursor: pointer;
 }
 
+#black-card li {
+  background-color: black;
+}
+
+#black-card li a {
+  color: white;
+}
+
 #nickname-div { color: grey; margin-left: 410px; margin-top: 40px; }
+
+#player-status { width: 800px; margin-left: 250px; color: white; margin-top: 10px; }
 
 .navbar { margin-bottom: 0; }
 

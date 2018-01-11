@@ -10,6 +10,7 @@ app.use(express.static('client/build'));
 app.use(bodyParser.urlencoded({extended: true}));
 const Game = require('./src/models/game.js');
 const Player = require('./src/models/player.js');
+let selectedCards = [];
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -53,17 +54,59 @@ io.on('connection', function(socket){
     io.emit('chat message', socket.nickname + ': ' + msg);
   });
 
-  socket.on('white card', function(card){
-    io.emit('selected white card', card);
+  socket.on('answer played', function(card){
+    let selectingPlayer = newGame.getPlayer(socket.id)
+    console.log(`An answer has been played`);
+    selectedCards.push({card: card, selectingPlayer: selectingPlayer});
+    console.log(`selectedCards: ${selectedCards}`);
+    let index = selectingPlayer.cards.indexOf(card);
+    selectingPlayer.cards.splice(index, 1);
+
+    // If all pending answers have been played
+    // if(selectedCards.length === players.length - 1) {
+      io.emit('all answers played', selectedCards);
+    // }
   })
+
+  socket.on('czar selects winning card', function(data) {
+    console.log("CZAR selected a winning card");
+    let winnerOfRound = newGame.getPlayer(data.player.id)
+    winnerOfRound.addPoint()
+    io.emit('winner chosen')
+    selectedCards = [];
+
+    // if game over
+    if (newGame.isGameOver()){
+      let winner = newGame.getWinner();
+      io.emit('announce game winner', winner);
+    }else{
+      // new round
+      newGame.dealWhiteCards()
+      newGame.setCardCzar()
+
+      newGame.players.forEach(function(player) {
+        io.to(player.id).emit('cards dealt', player.cards)
+        if (player.isCardCzar){
+          io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
+        }else{
+          io.to(player.id).emit('czar confirm', `${player.username}, select a card to play`);
+        };
+      });
+      io.emit('black card', newGame.getBlackCard());
+      io.emit('announce winner')
+    }
+  });
+
   socket.on('new game', function(msg){
+    selectedCards = [];
+
     players.forEach(function(player){
       const newPlayer = new Player(player.name, player.id)
       newGame.addPlayer(newPlayer);
     });
     newGame.startGame();
     newGame.players.forEach(function(player) {
-      io.to(player.id).emit('cards given', player.cards)
+      io.to(player.id).emit('cards dealt', player.cards)
       if (player.isCardCzar){
         io.to(player.id).emit('czar confirm', `${player.username}, you are the Card Czar. Select a winning card!`);
       }else{
@@ -72,13 +115,7 @@ io.on('connection', function(socket){
     });
     io.emit('black card', newGame.getBlackCard());
 
-
-
   });
-
-
-
-
 });
 
 const port = process.env.PORT || 3000;
