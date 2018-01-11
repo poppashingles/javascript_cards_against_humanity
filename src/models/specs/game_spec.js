@@ -25,14 +25,14 @@ describe('Game', function () {
     assert.strictEqual(game.blackCards[0].text, "Why can't I sleep at night?");
     game.shuffleCards(game.blackCards);
     assert.notStrictEqual(game.blackCards[0].text, "Why can't I sleep at night?")
-    console.log(`New index 0 is: ${game.blackCards[0].text}`);
+    // console.log(`New index 0 is: ${game.blackCards[0].text}`);
   });
 
   it('array of white cards should be shuffled', function(){
     assert.strictEqual(game.whiteCards[0], "Coat hanger abortions.")
     game.shuffleCards(game.whiteCards);
     assert.notStrictEqual(game.whiteCards[0], "Coat hanger abortions.")
-    console.log(`New index 0 is: ${game.whiteCards[0]}`);
+    // console.log(`New index 0 is: ${game.whiteCards[0]}`);
   })
 
   it('should be able to add players to game', function(){

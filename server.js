@@ -38,7 +38,7 @@ io.on('connection', function(socket) {
 });
 
 io.on('connection', function(socket){
-  console.log('a user connected');
+  // console.log('a user connected');
   socket.on('disconnect', function(){
     if(socket.nickname) {
       io.emit('chat message', socket.nickname + ' has left the room');
@@ -57,9 +57,9 @@ io.on('connection', function(socket){
 
   socket.on('answer played', function(card){
     let selectingPlayer = newGame.getPlayer(socket.id)
-    console.log(`An answer has been played`);
+    // console.log(`An answer has been played`);
     selectedCards.push({card: card, selectingPlayer: selectingPlayer});
-    console.log(`selectedCards: ${selectedCards}`);
+    // console.log(`selectedCards: ${selectedCards}`);
     let index = selectingPlayer.cards.indexOf(card);
     selectingPlayer.cards.splice(index, 1);
 
@@ -70,7 +70,7 @@ io.on('connection', function(socket){
   })
 
   socket.on('czar selects winning card', function(data) {
-    console.log("CZAR selected a winning card");
+    // console.log("CZAR selected a winning card");
     let winnerOfRound = newGame.getPlayer(data.player.id)
     winnerOfRound.addPoint()
     io.emit('winner chosen')
@@ -125,5 +125,5 @@ io.on('connection', function(socket){
 const port = process.env.PORT || 3000;
 
 http.listen(port, function() {
-  console.log('App running!!');
+  // console.log('App running!!');
 });

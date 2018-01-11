@@ -5,7 +5,7 @@ const app = function() {
   const socket = io();
 
   socket.on('connect', function() {
-    console.log('client connected');
+    // console.log('client connected');
 
     const buttonForm = document.querySelector('#click-form');
 
@@ -57,11 +57,11 @@ const app = function() {
   })
 
   startButton.addEventListener('click', function(evt) {
-    console.log(`Emitting 'new game'`);
+    // console.log(`Emitting 'new game'`);
     socket.emit('new game');
     startButton.style.display = 'none';
     blackCard.style.display = 'block';
-    console.log('start button clicked');
+    // console.log('start button clicked');
   });
 
   socket.on('cards dealt', function(cards) {
@@ -79,7 +79,7 @@ const app = function() {
         evt.preventDefault();
 
 
-        console.log(`Emitting 'answer played' >> ${card}`);
+        // console.log(`Emitting 'answer played' >> ${card}`);
         socket.emit('answer played', card)
       })
     })
@@ -128,7 +128,7 @@ const app = function() {
   })
 
 
-        console.log(`Emitting 'czar selects winning card'`);
+        // console.log(`Emitting 'czar selects winning card'`);
         socket.emit('czar selects winning card', { card: selectedWhiteCard, player: player})
         li.remove()
       })
