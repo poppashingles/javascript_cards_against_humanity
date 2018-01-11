@@ -16,7 +16,7 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-const newGame = new Game();
+let newGame = new Game();
 
 io.on('connection', function(socket) {
   socket.on('new user', function(data, callback) {
