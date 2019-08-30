@@ -1,3 +1,3 @@
-# JavaScript Group Project
+# Cards Against Javscript
 
-Using JavaScript and websockets to create an online mutiplayer cards against humanity version.
+Using JavaScript and websockets to create an online mutiplayer version of cards against humanity.
